@@ -1,0 +1,39 @@
+com.example.odoo.app-recyclerview-1.1.0-0 C:\Users\HP 840 G3\.gradle\caches\transforms-3\00dbb69018761a8167f8d9d07423c2e1\transformed\recyclerview-1.1.0\res
+com.example.odoo.app-appcompat-1.2.0-1 C:\Users\HP 840 G3\.gradle\caches\transforms-3\09a71f45a2f110948b735c42a8fac7af\transformed\appcompat-1.2.0\res
+com.example.odoo.app-jetified-lifecycle-viewmodel-savedstate-2.6.1-2 C:\Users\HP 840 G3\.gradle\caches\transforms-3\0d71402e87d63dfcdd1e8a19179a5833\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.1\res
+com.example.odoo.app-jetified-play-services-base-17.4.0-3 C:\Users\HP 840 G3\.gradle\caches\transforms-3\1a7d33a1dd6289df9ecade9fe9e3ac6f\transformed\jetified-play-services-base-17.4.0\res
+com.example.odoo.app-constraintlayout-2.0.1-4 C:\Users\HP 840 G3\.gradle\caches\transforms-3\21656ca58ebc2f5b695d36d1899076be\transformed\constraintlayout-2.0.1\res
+com.example.odoo.app-jetified-window-1.0.0-beta04-5 C:\Users\HP 840 G3\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\res
+com.example.odoo.app-cardview-1.0.0-6 C:\Users\HP 840 G3\.gradle\caches\transforms-3\391dbc4c601d40f71df8c0bc4da55bcb\transformed\cardview-1.0.0\res
+com.example.odoo.app-lifecycle-livedata-2.6.1-7 C:\Users\HP 840 G3\.gradle\caches\transforms-3\4a950aaebf1aaad1fe6a2fdd6201e69a\transformed\lifecycle-livedata-2.6.1\res
+com.example.odoo.app-material-1.3.0-8 C:\Users\HP 840 G3\.gradle\caches\transforms-3\5cc8db564d46f28c055925bb471009a5\transformed\material-1.3.0\res
+com.example.odoo.app-jetified-profileinstaller-1.3.0-9 C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\res
+com.example.odoo.app-jetified-core-ktx-1.9.0-10 C:\Users\HP 840 G3\.gradle\caches\transforms-3\6986cae96b686f2e93574dc5a88ccd98\transformed\jetified-core-ktx-1.9.0\res
+com.example.odoo.app-jetified-savedstate-1.2.1-11 C:\Users\HP 840 G3\.gradle\caches\transforms-3\8d45f58db1b5efd11956cf5f8829d6d3\transformed\jetified-savedstate-1.2.1\res
+com.example.odoo.app-jetified-annotation-experimental-1.3.0-12 C:\Users\HP 840 G3\.gradle\caches\transforms-3\937d6edc8055f6701a18eeac1a67afe6\transformed\jetified-annotation-experimental-1.3.0\res
+com.example.odoo.app-jetified-activity-1.7.0-13 C:\Users\HP 840 G3\.gradle\caches\transforms-3\9de7dd46cf96973d31ee7a55f0d2d4c7\transformed\jetified-activity-1.7.0\res
+com.example.odoo.app-jetified-window-java-1.0.0-beta04-14 C:\Users\HP 840 G3\.gradle\caches\transforms-3\ae81e06d24c799147c26814497a2a305\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.odoo.app-core-1.9.0-15 C:\Users\HP 840 G3\.gradle\caches\transforms-3\c2aff38445ebad8ddeaa989ecf50f56e\transformed\core-1.9.0\res
+com.example.odoo.app-transition-1.2.0-16 C:\Users\HP 840 G3\.gradle\caches\transforms-3\cb1c3a5af7c82b5af321d06f2b3c2969\transformed\transition-1.2.0\res
+com.example.odoo.app-coordinatorlayout-1.1.0-17 C:\Users\HP 840 G3\.gradle\caches\transforms-3\d071ef144612d1d729b2e1496f805d8b\transformed\coordinatorlayout-1.1.0\res
+com.example.odoo.app-jetified-appcompat-resources-1.2.0-18 C:\Users\HP 840 G3\.gradle\caches\transforms-3\d1e7acf1aa2051d3be77ae7ecbe61dff\transformed\jetified-appcompat-resources-1.2.0\res
+com.example.odoo.app-jetified-startup-runtime-1.1.1-19 C:\Users\HP 840 G3\.gradle\caches\transforms-3\d2a7f03e118140f639e8945afb58cddb\transformed\jetified-startup-runtime-1.1.1\res
+com.example.odoo.app-lifecycle-viewmodel-2.6.1-20 C:\Users\HP 840 G3\.gradle\caches\transforms-3\d5cb841d085c8da3ed38e468f997390f\transformed\lifecycle-viewmodel-2.6.1\res
+com.example.odoo.app-media-1.0.0-21 C:\Users\HP 840 G3\.gradle\caches\transforms-3\d9fefd3231d7c549dee86f94a8a71d09\transformed\media-1.0.0\res
+com.example.odoo.app-core-runtime-2.2.0-22 C:\Users\HP 840 G3\.gradle\caches\transforms-3\db3ce0e4102f75753fdc0e9c2753a822\transformed\core-runtime-2.2.0\res
+com.example.odoo.app-jetified-viewpager2-1.0.0-23 C:\Users\HP 840 G3\.gradle\caches\transforms-3\e049ddff91b1b01ee52b6e0ceef1dfeb\transformed\jetified-viewpager2-1.0.0\res
+com.example.odoo.app-jetified-play-services-basement-17.4.0-24 C:\Users\HP 840 G3\.gradle\caches\transforms-3\e400f5504a9bef5c23ec6dbeeb3aa8aa\transformed\jetified-play-services-basement-17.4.0\res
+com.example.odoo.app-lifecycle-runtime-2.6.1-25 C:\Users\HP 840 G3\.gradle\caches\transforms-3\e97fce397db1acf9b6f475dedfc7d654\transformed\lifecycle-runtime-2.6.1\res
+com.example.odoo.app-lifecycle-livedata-core-2.6.1-26 C:\Users\HP 840 G3\.gradle\caches\transforms-3\eed11806d4af25229ebcb855da7e9479\transformed\lifecycle-livedata-core-2.6.1\res
+com.example.odoo.app-debug-27 E:\Odoo\android\app\src\debug\res
+com.example.odoo.app-main-28 E:\Odoo\android\app\src\main\res
+com.example.odoo.app-pngs-29 E:\Odoo\build\app\generated\res\pngs\debug
+com.example.odoo.app-resValues-30 E:\Odoo\build\app\generated\res\resValues\debug
+com.example.odoo.app-rs-31 E:\Odoo\build\app\generated\res\rs\debug
+com.example.odoo.app-mergeDebugResources-32 E:\Odoo\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.odoo.app-mergeDebugResources-33 E:\Odoo\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.odoo.app-merged_res-34 E:\Odoo\build\app\intermediates\merged_res\debug
+com.example.odoo.app-packaged_res-35 E:\Odoo\build\flutter_barcode_scanner\intermediates\packaged_res\debug
+com.example.odoo.app-packaged_res-36 E:\Odoo\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\debug
+com.example.odoo.app-packaged_res-37 E:\Odoo\build\fluttertoast\intermediates\packaged_res\debug
+com.example.odoo.app-packaged_res-38 E:\Odoo\build\image_picker_android\intermediates\packaged_res\debug
