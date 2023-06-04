@@ -3,6 +3,7 @@ import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'dart:convert';
 import 'auth.dart';
+import 'update_quantitty.dart';
 
 class ModifyProductPage extends StatefulWidget {
   final dynamic product;
@@ -18,7 +19,6 @@ class _ModifyProductPageState extends State<ModifyProductPage> {
   late TextEditingController nameController;
   late TextEditingController listPriceController;
   late TextEditingController standardPriceController;
-  late TextEditingController qtyAvailableController;
   late TextEditingController virtualAvailableController;
   late TextEditingController defaultCodeController;
   late TextEditingController weightController;
@@ -35,27 +35,22 @@ class _ModifyProductPageState extends State<ModifyProductPage> {
         text: widget.product['list_price']?.toString() ?? '');
     standardPriceController = TextEditingController(
         text: widget.product['standard_price']?.toString() ?? '');
-    qtyAvailableController = TextEditingController(
-        text: widget.product['qty_available']?.toString() ?? '');
     virtualAvailableController = TextEditingController(
         text: widget.product['virtual_available']?.toString() ?? '');
-
+    defaultCodeController = TextEditingController(
+        text: widget.product['default_code'] == false
+            ? ''
+            : widget.product['default_code'].toString());
     weightController =
         TextEditingController(text: widget.product['weight']?.toString() ?? '');
     volumeController =
         TextEditingController(text: widget.product['volume']?.toString() ?? '');
     saleDelayController = TextEditingController(
         text: widget.product['sale_delay']?.toString() ?? '');
-    defaultCodeController = TextEditingController(
-      text: widget.product['default_code'] == false
-          ? ''
-          : widget.product['default_code'].toString(),
-    );
     barcodeController = TextEditingController(
-      text: widget.product['barcode'] == false
-          ? ''
-          : widget.product['barcode'].toString(),
-    );
+        text: widget.product['barcode'] == false
+            ? ''
+            : widget.product['barcode'].toString());
   }
 
   @override
@@ -63,7 +58,6 @@ class _ModifyProductPageState extends State<ModifyProductPage> {
     nameController.dispose();
     listPriceController.dispose();
     standardPriceController.dispose();
-    qtyAvailableController.dispose();
     virtualAvailableController.dispose();
     defaultCodeController.dispose();
     weightController.dispose();
@@ -78,7 +72,6 @@ class _ModifyProductPageState extends State<ModifyProductPage> {
       'name': nameController.text,
       'list_price': double.parse(listPriceController.text),
       'standard_price': double.parse(standardPriceController.text),
-      'qty_available': double.parse(qtyAvailableController.text),
       'virtual_available': double.parse(virtualAvailableController.text),
       'default_code': defaultCodeController.text,
       'weight': double.parse(weightController.text),
@@ -102,6 +95,7 @@ class _ModifyProductPageState extends State<ModifyProductPage> {
       });
 
       print('Product updated successfully: $response');
+
       showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -197,6 +191,29 @@ class _ModifyProductPageState extends State<ModifyProductPage> {
               ],
             ),
             SizedBox(height: 16.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Quantity Available: ${widget.product['qty_available']}',
+                  style: TextStyle(fontSize: 18.0),
+                ),
+                IconButton(
+                  icon: Icon(Icons.edit),
+                  onPressed: () {
+                    // Navigate to the update quantity page
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            UpdateQuantityPage(product: widget.product),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
+            SizedBox(height: 16.0),
             TextField(
               controller: nameController,
               decoration: InputDecoration(
@@ -217,14 +234,6 @@ class _ModifyProductPageState extends State<ModifyProductPage> {
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 labelText: 'Standard Price',
-              ),
-            ),
-            SizedBox(height: 16.0),
-            TextField(
-              controller: qtyAvailableController,
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                labelText: 'Quantity Available',
               ),
             ),
             SizedBox(height: 16.0),

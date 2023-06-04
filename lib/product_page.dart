@@ -95,11 +95,43 @@ class _ProductPageState extends State<ProductPage> {
     );
   }
 
+  void navigateToScannedProductDetails(String barcode) {
+    // Find the product with the matching barcode
+    dynamic scannedProduct = products.firstWhere(
+      (product) => product['barcode'] == barcode,
+      orElse: () => null,
+    );
+
+    if (scannedProduct != null) {
+      navigateToProductDetails(scannedProduct);
+    } else {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Product Not Found'),
+            content: Text('The scanned barcode does not match any product.'),
+            actions: <Widget>[
+              TextButton(
+                child: Text('OK'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        },
+      );
+    }
+  }
+
   void navigateToModifyProduct(dynamic product) {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => ModifyProductPage(product: product),
+        builder: (context) => ModifyProductPage(
+          product: product,
+        ),
       ),
     ).then((result) {
       if (result == true) {
@@ -112,7 +144,7 @@ class _ProductPageState extends State<ProductPage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => DeleteProductPage(product: product),
+        builder: (context) => ArchiveProductPage(product: product),
       ),
     ).then((result) {
       if (result == true) {
@@ -202,7 +234,16 @@ class _ProductPageState extends State<ProductPage> {
           ),
           IconButton(
             icon: Icon(Icons.qr_code_scanner),
-            onPressed: () => QrCode(),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => BarcodeScannerPage(
+                    products: products,
+                  ),
+                ),
+              );
+            },
           ),
         ],
       ),
@@ -255,7 +296,9 @@ class _ProductSearchPageState extends State<ProductSearchPage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => ModifyProductPage(product: product),
+        builder: (context) => ModifyProductPage(
+          product: product,
+        ),
       ),
     ).then((result) {
       if (result == true) {
@@ -268,7 +311,7 @@ class _ProductSearchPageState extends State<ProductSearchPage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => DeleteProductPage(product: product),
+        builder: (context) => ArchiveProductPage(product: product),
       ),
     ).then((result) {
       if (result == true) {

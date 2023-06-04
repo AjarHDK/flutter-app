@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:odoo/Reception.dart';
 import 'package:odoo/product_page.dart';
 import 'user_page.dart';
 import 'stockPage.dart';
@@ -72,7 +73,12 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.check_box),
             title: Text('Reception'),
-            onTap: () => print('rece'),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ReceptionPage()),
+              ),
+            },
           ),
           ListTile(
             leading: Icon(Icons.local_shipping),

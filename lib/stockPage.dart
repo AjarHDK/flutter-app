@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'auth.dart';
 import 'dart:convert';
 import 'dart:typed_data';
+import 'stock_details.dart';
 
 class StockPage extends StatefulWidget {
   const StockPage({Key? key}) : super(key: key);
@@ -267,11 +268,34 @@ class _StockPageState extends State<StockPage> {
           ),
           trailing: IconButton(
             icon: Icon(
-              Icons.more_vert,
+              Icons.arrow_forward_ios,
               color: Colors.grey,
             ),
             onPressed: () {
-              navigateToStockDetails(stock);
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(actions: <Widget>[
+                      TextButton(
+                        child: Column(
+                          children: [
+                            ListTile(
+                              title: Text('Hello'),
+                            ),
+                            Container(
+                              child: SizedBox(
+                                child: Text('This is the first text.'),
+                              ),
+                            ),
+                          ],
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                    ]);
+                  });
             },
           ),
         ),
@@ -321,34 +345,6 @@ class _StockPageState extends State<StockPage> {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class StockDetailsPage extends StatelessWidget {
-  final dynamic stock;
-
-  const StockDetailsPage({Key? key, required this.stock}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Stock Details'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Stock Name: ${stock['display_name']}'),
-            Text('Qty Available: ${stock['qty_available']}'),
-            Text('Free Qty: ${stock['free_qty']}'),
-            Text('Incoming Qty: ${stock['incoming_qty']}'),
-            Text('Outgoing Qty: ${stock['outgoing_qty']}'),
-            Text('List Price: ${stock['list_price']}'),
-          ],
-        ),
       ),
     );
   }
