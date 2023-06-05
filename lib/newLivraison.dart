@@ -8,12 +8,12 @@ class ProductTemplate {
   ProductTemplate({required this.id, required this.name});
 }
 
-class NewReceptionPage extends StatefulWidget {
+class NewLivraisonPage extends StatefulWidget {
   @override
-  _NewReceptionPageState createState() => _NewReceptionPageState();
+  _NewLivraisonPageState createState() => _NewLivraisonPageState();
 }
 
-class _NewReceptionPageState extends State<NewReceptionPage> {
+class _NewLivraisonPageState extends State<NewLivraisonPage> {
   final orpc = Auth.orpc;
   TextEditingController productQtyController = TextEditingController();
   TextEditingController quantityDoneController = TextEditingController();
@@ -87,7 +87,7 @@ class _NewReceptionPageState extends State<NewReceptionPage> {
       'method': 'search_read',
       'args': [
         [
-          ['code', '=', 'incoming']
+          ['code', '=', 'outgoing']
         ],
         ['id', 'name', 'warehouse_id'],
       ],
@@ -169,7 +169,7 @@ class _NewReceptionPageState extends State<NewReceptionPage> {
           'location_id': 4,
           'location_dest_id': _selectedDestinationId,
           'picking_type_id': _selectedPickingTypeId,
-          'picking_type_code': 'incoming',
+          'picking_type_code': 'outgoing',
           'use_create_lots': true,
           'use_existing_lots': false,
           'create_date': DateTime(
@@ -401,7 +401,7 @@ class _NewReceptionPageState extends State<NewReceptionPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('New Reception'),
+        title: Text('New Livraison'),
       ),
       body: Padding(
         padding: EdgeInsets.all(16),
@@ -511,20 +511,20 @@ class _NewReceptionPageState extends State<NewReceptionPage> {
               ElevatedButton(
                 onPressed: isSubmitButtonEnabledDraft
                     ? () => createPickingRecordPart2(
-                        'Reception created in draft mode')
+                        'Livraison created in draft mode')
                     : null,
                 child: Text('brouillon'),
               ),
               ElevatedButton(
                 onPressed: isSubmitButtonEnabled
                     ? () =>
-                        createPickingRecordPart2("Reception marked as to do")
+                        createPickingRecordPart2("Livraison marked as to do")
                     : null,
                 child: Text('Marquer comme a faire'),
               ),
               ElevatedButton(
                 onPressed: isSubmitButtonEnabled
-                    ? () => createPickingRecord('Reception validated')
+                    ? () => createPickingRecord('Livraison validated')
                     : null,
                 child: Text('Valider'),
               ),

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'auth.dart';
 import 'updateReception.dart';
-import 'newReception.dart';
+import 'newLivraison.dart';
 
-class ReceptionPage extends StatefulWidget {
+class LivraisonPage extends StatefulWidget {
   @override
-  State<ReceptionPage> createState() => _ReceptionPageState();
+  State<LivraisonPage> createState() => _LivraisonPageState();
 }
 
-class _ReceptionPageState extends State<ReceptionPage> {
+class _LivraisonPageState extends State<LivraisonPage> {
   final orpc = Auth.orpc;
   List<dynamic> receptions = [];
   List<dynamic> additionalData = [];
@@ -26,7 +26,7 @@ class _ReceptionPageState extends State<ReceptionPage> {
         'method': 'search_read',
         'args': [
           [
-            ['picking_type_code', '=', 'incoming']
+            ['picking_type_code', '=', 'outgoing']
           ],
         ],
         'kwargs': {
@@ -84,14 +84,14 @@ class _ReceptionPageState extends State<ReceptionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Reception'), actions: [
+      appBar: AppBar(title: Text('Livraison'), actions: [
         IconButton(
           icon: Icon(Icons.add),
           onPressed: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => NewReceptionPage(),
+                builder: (context) => NewLivraisonPage(),
               ),
             );
           },

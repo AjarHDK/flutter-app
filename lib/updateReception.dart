@@ -14,9 +14,9 @@ class _updateReceptionPageState extends State<updateReceptionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Create Reception'),
+        title: Text('Update  Reception'),
       ),
-      body: Text(widget.reception['name']),
+      body: Center(child: Text(widget.reception['name'])),
     );
   }
 }

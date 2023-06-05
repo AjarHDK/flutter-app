@@ -3,12 +3,12 @@ import 'auth.dart';
 import 'updateReception.dart';
 import 'newReception.dart';
 
-class ReceptionPage extends StatefulWidget {
+class TransfertInternalPage extends StatefulWidget {
   @override
-  State<ReceptionPage> createState() => _ReceptionPageState();
+  State<TransfertInternalPage> createState() => _TransfertInternalPageState();
 }
 
-class _ReceptionPageState extends State<ReceptionPage> {
+class _TransfertInternalPageState extends State<TransfertInternalPage> {
   final orpc = Auth.orpc;
   List<dynamic> receptions = [];
   List<dynamic> additionalData = [];
@@ -26,7 +26,7 @@ class _ReceptionPageState extends State<ReceptionPage> {
         'method': 'search_read',
         'args': [
           [
-            ['picking_type_code', '=', 'incoming']
+            ['picking_type_code', '=', 'internal']
           ],
         ],
         'kwargs': {
@@ -66,7 +66,7 @@ class _ReceptionPageState extends State<ReceptionPage> {
         builder: (BuildContext context) {
           return AlertDialog(
             title: Text('Error'),
-            content: Text('Failed to fetch Receptions.'),
+            content: Text('Failed to fetch Transfert.'),
             actions: <Widget>[
               TextButton(
                 child: Text('OK'),
@@ -84,7 +84,7 @@ class _ReceptionPageState extends State<ReceptionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Reception'), actions: [
+      appBar: AppBar(title: Text('Transfert Interne'), actions: [
         IconButton(
           icon: Icon(Icons.add),
           onPressed: () {

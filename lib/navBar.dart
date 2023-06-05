@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:odoo/Reception.dart';
+
 import 'package:odoo/product_page.dart';
 import 'user_page.dart';
 import 'stockPage.dart';
+import 'Reception.dart';
+import 'livraison.dart';
+import 'transfer.dart';
 
 class NavBar extends StatelessWidget {
   NavBar();
@@ -83,7 +86,23 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.local_shipping),
             title: Text('Livraison'),
-            onTap: () => print('liv'),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LivraisonPage()),
+              ),
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.swap_horiz),
+            title: Text('Transfert interne'),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => TransfertInternalPage()),
+              ),
+            },
           ),
           ListTile(
             leading: Icon(Icons.insert_chart),
