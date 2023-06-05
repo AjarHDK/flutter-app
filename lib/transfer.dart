@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'auth.dart';
 import 'updateReception.dart';
-import 'newReception.dart';
+import 'new_transfert.dart';
 
 class TransfertInternalPage extends StatefulWidget {
   @override
@@ -91,7 +91,7 @@ class _TransfertInternalPageState extends State<TransfertInternalPage> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => NewReceptionPage(),
+                builder: (context) => NewTransfertPage(),
               ),
             );
           },
@@ -125,8 +125,9 @@ Widget buildProductItem(
       children: [
         Text('date: ${reception['scheduled_date'] ?? ''}'),
         Text('Status: ${reception['state']}'),
-        Text('type operation: ${reception['picking_type_id'][1]}'),
-        Text('product: ${reception['product_id'][1].toString()}'),
+        Text('type operation: ${reception['picking_type_id']}'),
+        Text(
+            'product: ${reception['product_id'] is bool ? 'none' : reception['product_id'][1].toString()}'),
         Text('id: ${reception['id'].toString()}'),
         if (additionalItem != null) ...[
           Text('quantity: ${additionalItem['product_uom_qty']}'),

@@ -126,7 +126,8 @@ Widget buildProductItem(
         Text('date: ${reception['scheduled_date'] ?? ''}'),
         Text('Status: ${reception['state']}'),
         Text('type operation: ${reception['picking_type_id'][1]}'),
-        Text('product: ${reception['product_id'][1].toString()}'),
+        Text(
+            'product: ${reception['product_id'] is bool ? 'none' : reception['product_id'].toString()}'),
         Text('id: ${reception['id'].toString()}'),
         if (additionalItem != null) ...[
           Text('quantity: ${additionalItem['product_uom_qty']}'),
