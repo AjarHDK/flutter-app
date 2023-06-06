@@ -48,6 +48,28 @@ class _NewReceptionPageState extends State<NewReceptionPage> {
     super.dispose();
   }
 
+  Future<int?> getLocationId() async {
+    String modelLocation = 'stock.location';
+
+    List<dynamic> results = await orpc?.callKw({
+      'model': modelLocation,
+      'method': 'search_read',
+      'args': [
+        [
+          ['usage', '=', 'internal']
+        ], // Add your search criteria here
+        ['id'],
+      ],
+      'kwargs': {},
+    });
+
+    if (results.isNotEmpty) {
+      return results[0]['id'];
+    }
+
+    return null;
+  }
+
   void updateSubmitButtonStatus() {
     setState(() {
       // Update the enabled status of the submit button based on the text fields' values
@@ -149,7 +171,8 @@ class _NewReceptionPageState extends State<NewReceptionPage> {
   }
 
   Future<void> createPickingRecord(String message) async {
-    if (_selectedProductId == null) {
+    int? locationId = await getLocationId();
+    if (locationId == null || _selectedProductId == null) {
       // Product not selected
       return;
     }
@@ -166,7 +189,7 @@ class _NewReceptionPageState extends State<NewReceptionPage> {
           'note': false,
           'move_type': 'direct',
           'state': 'done',
-          'location_id': 4,
+          'location_id': locationId,
           'location_dest_id': _selectedDestinationId,
           'picking_type_id': _selectedPickingTypeId,
           'picking_type_code': 'incoming',
@@ -202,13 +225,14 @@ class _NewReceptionPageState extends State<NewReceptionPage> {
           'picking_id': newPickingId,
           'product_id': _selectedProductId,
           'product_uom_qty': productQty, // User input for product_uom_qty
-          'location_id': 4, // Source location
+          'location_id': locationId, // Source location
           'location_dest_id': _selectedDestinationId, // Destination location
           'name': 'Move Line Description', // Description of the move line
         },
       ],
       'kwargs': {},
     });
+    print(moveLineId);
 
     await orpc?.callKw({
       'model': modelMove,
@@ -247,7 +271,8 @@ class _NewReceptionPageState extends State<NewReceptionPage> {
   }
 
   Future<void> createPickingRecordPart2(String message) async {
-    if (_selectedProductId == null) {
+    int? locationId = await getLocationId();
+    if (locationId == null || _selectedProductId == null) {
       // Product not selected
       return;
     }
@@ -264,7 +289,7 @@ class _NewReceptionPageState extends State<NewReceptionPage> {
           'note': false,
           'move_type': 'direct',
           'state': 'done',
-          'location_id': 4,
+          'location_id': locationId,
           'location_dest_id': _selectedDestinationId,
           'picking_type_id': _selectedPickingTypeId,
           'picking_type_code': 'incoming',
@@ -300,13 +325,14 @@ class _NewReceptionPageState extends State<NewReceptionPage> {
           'picking_id': newPickingId,
           'product_id': _selectedProductId,
           'product_uom_qty': productQty, // User input for product_uom_qty
-          'location_id': 4, // Source location
+          'location_id': locationId, // Source location
           'location_dest_id': _selectedDestinationId, // Destination location
           'name': 'Move Line Description', // Description of the move line
         },
       ],
       'kwargs': {},
     });
+    print(moveLineId);
 
     await orpc?.callKw({
       'model': modelMove,

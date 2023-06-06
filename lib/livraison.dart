@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'auth.dart';
-import 'updateReception.dart';
+import 'updateTransfert.dart';
 import 'newLivraison.dart';
 
 class LivraisonPage extends StatefulWidget {
@@ -127,7 +127,7 @@ Widget buildProductItem(
         Text('Status: ${reception['state']}'),
         Text('type operation: ${reception['picking_type_id'][1]}'),
         Text(
-            'product: ${reception['product_id'] is bool ? 'none' : reception['product_id'].toString()}'),
+            'product: ${reception['product_id'] is bool ? 'none' : reception['product_id'][1].toString()}'),
         Text('id: ${reception['id'].toString()}'),
         if (additionalItem != null) ...[
           Text('quantity: ${additionalItem['product_uom_qty']}'),
@@ -138,7 +138,10 @@ Widget buildProductItem(
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => updateReceptionPage(reception: reception),
+          builder: (context) => UpdateTransfertPage(
+            reception: reception,
+            additionalItem: additionalItem,
+          ),
         ),
       );
     },

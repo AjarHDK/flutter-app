@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'auth.dart';
-import 'updateReception.dart';
+import 'updateTransfert.dart';
 import 'newReception.dart';
 
 class ReceptionPage extends StatefulWidget {
@@ -49,9 +49,12 @@ class _ReceptionPageState extends State<ReceptionPage> {
         'args': [],
         'kwargs': {
           'fields': [
+            'id',
             'reference',
+            'picking_id',
             'state',
             'product_uom_qty',
+            'quantity_done',
           ], // Replace with the desired fields
         },
       });
@@ -130,17 +133,24 @@ Widget buildProductItem(
             'product: ${reception['product_id'] is bool ? 'none' : reception['product_id'][1].toString()}'),
         Text('id: ${reception['id'].toString()}'),
         if (additionalItem != null) ...[
-          Text('quantity: ${additionalItem['product_uom_qty']}'),
+          Text('quantity demandée: ${additionalItem['product_uom_qty']}'),
+          Text('quantity done : ${additionalItem['quantity_done']}'),
         ],
       ],
     ),
     onTap: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => updateReceptionPage(reception: reception),
-        ),
-      );
+      if (reception['state'] != 'done') {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => UpdateTransfertPage(
+              reception: reception,
+              additionalItem:
+                  additionalItem, // Pass additionalItem as a parameter
+            ),
+          ),
+        );
+      }
     },
   );
 }

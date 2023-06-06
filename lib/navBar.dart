@@ -6,6 +6,7 @@ import 'stockPage.dart';
 import 'Reception.dart';
 import 'livraison.dart';
 import 'transfer.dart';
+import 'approvisonnement.dart';
 
 class NavBar extends StatelessWidget {
   NavBar();
@@ -69,11 +70,6 @@ class NavBar extends StatelessWidget {
             onTap: () => print('four'),
           ),
           ListTile(
-            leading: Icon(Icons.location_on),
-            title: Text('Emplacement'),
-            onTap: () => print('emp'),
-          ),
-          ListTile(
             leading: Icon(Icons.check_box),
             title: Text('Reception'),
             onTap: () => {
@@ -101,6 +97,16 @@ class NavBar extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => TransfertInternalPage()),
+              ),
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.location_on),
+            title: Text('Reaprovisonnement'),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ApprovisonnementPage()),
               ),
             },
           ),

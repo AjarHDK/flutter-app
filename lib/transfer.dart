@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'auth.dart';
-import 'updateReception.dart';
+import 'updateTransfert.dart';
 import 'new_transfert.dart';
 
 class TransfertInternalPage extends StatefulWidget {
@@ -138,7 +138,10 @@ Widget buildProductItem(
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => updateReceptionPage(reception: reception),
+          builder: (context) => UpdateTransfertPage(
+            reception: reception,
+            additionalItem: additionalItem,
+          ),
         ),
       );
     },
