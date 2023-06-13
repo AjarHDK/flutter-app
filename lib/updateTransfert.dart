@@ -54,20 +54,31 @@ class _UpdateTransfertPageState extends State<UpdateTransfertPage> {
         'kwargs': {},
       });
 
-      await orpc?.callKw({
+      final confirmResponse = await orpc?.callKw({
         'model': 'stock.picking',
         'method': 'action_confirm',
         'args': [
-          [widget.additionalItem['picking_id'][0]], // Pass the picking ID
+          [widget.additionalItem['picking_id'][0]], // Pass only the ID
         ],
         'kwargs': {},
       });
+
+      print(confirmResponse);
 
       await orpc?.callKw({
         'model': 'stock.picking',
         'method': 'button_validate',
         'args': [
-          [widget.additionalItem['picking_id'][0]], // Pass the picking ID
+          [widget.additionalItem['picking_id'][0]], // Pass only the ID
+        ],
+        'kwargs': {},
+      });
+      await orpc?.callKw({
+        'model': 'stock.picking',
+        'method': 'write',
+        'args': [
+          [widget.additionalItem['picking_id'][0]], // Pass only the ID
+          {'state': 'done'},
         ],
         'kwargs': {},
       });

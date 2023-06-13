@@ -24,9 +24,11 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
   List<ProductTemplate> _productTemplates = [];
   List<ProductTemplate> _productPickingTemplates = [];
   List<ProductTemplate> _productDestinationTemplates = [];
+  List<ProductTemplate> _productLocationTemplates = [];
   int? _selectedProductId;
   int? _selectedPickingTypeId;
   int? _selectedDestinationId;
+  int? _selectedLocationId;
   bool isSubmitButtonEnabled = false;
   bool isSubmitButtonEnabledDraft = false;
 
@@ -36,6 +38,7 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
     getProductTemplates();
     getPickingTypeIds();
     getDestinationIds();
+    getLocationIds();
     productQtyController.addListener(updateSubmitButtonStatus);
     quantityDoneController.addListener(updateSubmitButtonStatus);
   }
@@ -51,10 +54,7 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
   void updateSubmitButtonStatus() {
     setState(() {
       // Update the enabled status of the submit button based on the text fields' values
-      isSubmitButtonEnabledDraft = productQtyController.text.isNotEmpty &&
-          quantityDoneController.text.isEmpty;
-      isSubmitButtonEnabled = productQtyController.text.isNotEmpty &&
-          quantityDoneController.text.isNotEmpty;
+      isSubmitButtonEnabledDraft = quantityDoneController.text.isEmpty;
     });
   }
 
@@ -128,6 +128,28 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
     });
   }
 
+  Future<void> getLocationIds() async {
+    String modelProduct = 'stock.location';
+    List<dynamic> results = await orpc?.callKw({
+      'model': modelProduct,
+      'method': 'search_read',
+      'args': [
+        [],
+        ['id', 'complete_name'],
+      ],
+      'kwargs': {},
+    });
+
+    setState(() {
+      _productLocationTemplates = results
+          .map((record) => ProductTemplate(
+                id: record['id'],
+                name: record['complete_name'],
+              ))
+          .toList();
+    });
+  }
+
   void showCustomDialog(BuildContext context, String message) {
     showDialog(
       context: context,
@@ -162,11 +184,7 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
       'method': 'create',
       'args': [
         {
-          'origin': false,
-          'note': false,
-          'move_type': 'direct',
-          'state': 'done',
-          'location_id': 4,
+          'location_id': _selectedLocationId,
           'location_dest_id': _selectedDestinationId,
           'picking_type_id': _selectedPickingTypeId,
           'picking_type_code': 'internal',
@@ -190,9 +208,6 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
       ],
       'kwargs': {},
     });
-    int productQty = productQtyController.text.isNotEmpty
-        ? int.parse(productQtyController.text)
-        : 0;
 
     int moveLineId = await orpc?.callKw({
       'model': modelMove,
@@ -201,8 +216,8 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
         {
           'picking_id': newPickingId,
           'product_id': _selectedProductId,
-          'product_uom_qty': productQty, // User input for product_uom_qty
-          'location_id': 4, // Source location
+          // User input for product_uom_qty
+          'location_id': _selectedLocationId, // Source location
           'location_dest_id': _selectedDestinationId, // Destination location
           'name': 'Move Line Description', // Description of the move line
         },
@@ -220,15 +235,6 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
               ? int.parse(quantityDoneController.text)
               : 0,
         }, // User input for quantity_done
-      ],
-      'kwargs': {},
-    });
-
-    await orpc?.callKw({
-      'model': modelPicking,
-      'method': 'action_confirm',
-      'args': [
-        [newPickingId],
       ],
       'kwargs': {},
     });
@@ -260,11 +266,7 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
       'method': 'create',
       'args': [
         {
-          'origin': false,
-          'note': false,
-          'move_type': 'direct',
-          'state': 'done',
-          'location_id': 4,
+          'location_id': _selectedLocationId,
           'location_dest_id': _selectedDestinationId,
           'picking_type_id': _selectedPickingTypeId,
           'picking_type_code': 'internal',
@@ -288,9 +290,6 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
       ],
       'kwargs': {},
     });
-    int productQty = productQtyController.text.isNotEmpty
-        ? int.parse(productQtyController.text)
-        : 0;
 
     int moveLineId = await orpc?.callKw({
       'model': modelMove,
@@ -299,8 +298,8 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
         {
           'picking_id': newPickingId,
           'product_id': _selectedProductId,
-          'product_uom_qty': productQty, // User input for product_uom_qty
-          'location_id': 4, // Source location
+          // User input for product_uom_qty
+          'location_id': _selectedLocationId, // Source location
           'location_dest_id': _selectedDestinationId, // Destination location
           'name': 'Move Line Description', // Description of the move line
         },
@@ -309,19 +308,15 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
     });
 
     await orpc?.callKw({
-      'model': modelMove,
-      'method': 'write',
+      'model': 'stock.picking',
+      'method': 'action_reset_draft',
       'args': [
         [moveLineId],
-        {
-          'quantity_done': quantityDoneController.text.isNotEmpty
-              ? int.parse(quantityDoneController.text)
-              : 0,
-        }, // User input for quantity_done
+        // User input for quantity_done
       ],
       'kwargs': {},
     });
-    print('New reception record ID: $newPickingId');
+    print('New transfert record ID: $newPickingId');
     showCustomDialog(context, message);
   }
 
@@ -395,9 +390,8 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
 
   @override
   Widget build(BuildContext context) {
-    bool isProductQtyFilled = productQtyController.text.isNotEmpty;
     bool isQtyDoneFilled = quantityDoneController.text.isNotEmpty;
-    bool isSubmitButtonEnabled = isProductQtyFilled && isQtyDoneFilled;
+    bool isSubmitButtonEnabled = isQtyDoneFilled;
 
     return Scaffold(
       appBar: AppBar(
@@ -443,6 +437,23 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
                 ),
               ),
               DropdownButtonFormField<int>(
+                value: _selectedLocationId,
+                onChanged: (value) {
+                  setState(() {
+                    _selectedLocationId = value;
+                  });
+                },
+                items: _productLocationTemplates
+                    .map((template) => DropdownMenuItem<int>(
+                          value: template.id,
+                          child: Text(template.name),
+                        ))
+                    .toList(),
+                decoration: InputDecoration(
+                  labelText: 'source',
+                ),
+              ),
+              DropdownButtonFormField<int>(
                 value: _selectedDestinationId,
                 onChanged: (value) {
                   setState(() {
@@ -457,13 +468,6 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
                     .toList(),
                 decoration: InputDecoration(
                   labelText: 'Destination',
-                ),
-              ),
-              TextField(
-                controller: productQtyController,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  labelText: 'Product UOM Quantity',
                 ),
               ),
               TextField(
@@ -511,20 +515,13 @@ class _NewTransfertPageState extends State<NewTransfertPage> {
               ElevatedButton(
                 onPressed: isSubmitButtonEnabledDraft
                     ? () => createPickingRecordPart2(
-                        'Reception created in draft mode')
+                        'Transfert created in draft mode')
                     : null,
                 child: Text('brouillon'),
               ),
               ElevatedButton(
                 onPressed: isSubmitButtonEnabled
-                    ? () =>
-                        createPickingRecordPart2("Reception marked as to do")
-                    : null,
-                child: Text('Marquer comme a faire'),
-              ),
-              ElevatedButton(
-                onPressed: isSubmitButtonEnabled
-                    ? () => createPickingRecord('Reception validated')
+                    ? () => createPickingRecord('Transfert interne validated')
                     : null,
                 child: Text('Valider'),
               ),

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mailer/mailer.dart';
+import 'package:mailer/smtp_server.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 import 'auth.dart';
 
 class UserPage extends StatefulWidget {
@@ -9,10 +13,12 @@ class UserPage extends StatefulWidget {
 class _UserPageState extends State<UserPage> {
   final orpc = Auth.orpc;
   List<dynamic> users = [];
+  String? selectedRole; // Variable to hold the selected role
 
   @override
   void initState() {
     super.initState();
+    loadSelectedRole();
     fetchUsers();
   }
 
@@ -50,11 +56,40 @@ class _UserPageState extends State<UserPage> {
     }
   }
 
+  Future<void> saveSelectedRole() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('selectedRole', selectedRole ?? '');
+  }
+
+  Future<void> loadSelectedRole() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      selectedRole = prefs.getString('selectedRole');
+    });
+  }
+
+  Future<void> sendEmailToUser(String email) async {
+    final username = 'your_email@gmail.com'; // Your email address
+    final password = 'your_password'; // Your email password or app password
+
+    final smtpServer = gmail(username, password); // Use Gmail SMTP server
+
+    final message = Message()
+      ..from = Address(username, 'Your Name')
+      ..recipients.add(email)
+      ..subject = 'Subject of the email'
+      ..text = 'Body of the email';
+
+    try {
+      await send(message, smtpServer);
+      print('Email sent successfully!');
+    } catch (e) {
+      print('Error sending email: $e');
+    }
+  }
+
   Widget buildUserItem(dynamic user) {
     return ListTile(
-      //leading: CircleAvatar(
-      // backgroundImage: NetworkImage(user['image_1920'] ?? ''),
-      //),
       title: Text(
         user['name'],
       ),
@@ -64,6 +99,15 @@ class _UserPageState extends State<UserPage> {
           Text(user['email'] ?? ''),
           Text('Last Login: ${user['login_date'] ?? ''}'),
           Text('Status: ${user['state'] ?? ''}'),
+          if (selectedRole == 'Responsable d\'Achat')
+            ElevatedButton(
+              onPressed: () {
+                sendEmailToUser(user['email']);
+              },
+              child: Text('Send Email'),
+            ),
+          if (selectedRole != 'Responsable d\'Achat')
+            Text('Only "Responsable d\'Achat" can receive emails.'),
         ],
       ),
     );

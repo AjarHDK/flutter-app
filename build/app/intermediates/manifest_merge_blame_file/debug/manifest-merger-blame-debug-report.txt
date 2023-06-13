@@ -5,8 +5,8 @@
 5    android:versionName="1.0.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="16"
-9        android:targetSdkVersion="33" />
+8        android:minSdkVersion="22"
+9        android:targetSdkVersion="30" />
 10    <!--
 11         The INTERNET permission is required for development. Specifically,
 12         the Flutter tool needs it to communicate with the running application
@@ -15,177 +15,475 @@
 15    <uses-permission android:name="android.permission.INTERNET" />
 15-->E:\Odoo\android\app\src\debug\AndroidManifest.xml:6:5-66
 15-->E:\Odoo\android\app\src\debug\AndroidManifest.xml:6:22-64
-16    <uses-permission android:name="android.permission.CAMERA" />
-16-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-65
-16-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-62
-17
-18    <uses-feature android:name="android.hardware.camera" />
-18-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-60
-18-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:11:19-57
-19
-20    <uses-permission android:name="android.permission.FLASHLIGHT" />
-20-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-69
-20-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-66
-21
-22    <permission
-22-->[androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c2aff38445ebad8ddeaa989ecf50f56e\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-23        android:name="com.example.odoo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-23-->[androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c2aff38445ebad8ddeaa989ecf50f56e\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-24        android:protectionLevel="signature" />
-24-->[androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c2aff38445ebad8ddeaa989ecf50f56e\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
-25
-26    <uses-permission android:name="com.example.odoo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-26-->[androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c2aff38445ebad8ddeaa989ecf50f56e\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-26-->[androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c2aff38445ebad8ddeaa989ecf50f56e\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
-27
-28    <application
-29        android:name="android.app.Application"
-30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-30-->[androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c2aff38445ebad8ddeaa989ecf50f56e\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
-31        android:debuggable="true"
-32        android:icon="@mipmap/ic_launcher"
-33        android:label="odoo"
-34        android:largeHeap="true"
-34-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-33
-35        android:theme="@style/Theme.AppCompat.NoActionBar" >
-35-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-59
-36        <activity
-37            android:name="com.example.odoo.MainActivity"
-38            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-39            android:exported="true"
-40            android:hardwareAccelerated="true"
-41            android:launchMode="singleTop"
-42            android:theme="@style/LaunchTheme"
-43            android:windowSoftInputMode="adjustResize" >
-44
-45            <!--
-46                 Specifies an Android theme to apply to this Activity as soon as
-47                 the Android process has started. This theme is visible to the user
-48                 while the Flutter UI initializes. After that, this theme continues
-49                 to determine the Window background behind the Flutter UI.
-50            -->
-51            <meta-data
-52                android:name="io.flutter.embedding.android.NormalTheme"
-53                android:resource="@style/NormalTheme" />
+16    <uses-permission android:name="android.permission.WAKE_LOCK" />
+16-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
+16-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-65
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Permissions options for the `notification` group -->
+17-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
+17-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-76
+18    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+18-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-77
+18-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-74
+19    <uses-permission android:name="android.permission.CAMERA" />
+19-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-65
+19-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-62
+20
+21    <uses-feature android:name="android.hardware.camera" />
+21-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-60
+21-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:11:19-57
+22
+23    <uses-permission android:name="android.permission.FLASHLIGHT" />
+23-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-69
+23-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-66
+24    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+24-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-81
+24-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-78
+25    <uses-permission android:name="android.permission.VIBRATE" />
+25-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-66
+25-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-63
+26    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+26-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-81
+26-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-78
+27    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+27-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-79
+27-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:12:22-76
+28    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+28-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\09d8459ba415a5541dd918751c843e39\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:28:5-82
+28-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\09d8459ba415a5541dd918751c843e39\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:28:22-79
+29    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+29-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5a04a59768dbef76c9a94429546de2a1\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:25:5-79
+29-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5a04a59768dbef76c9a94429546de2a1\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:25:22-76
+30    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+30-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:26:5-110
+30-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:26:22-107
+31
+32    <permission
+32-->[androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5d74e95fb0075f60337058ab4b4b1813\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+33        android:name="com.example.odoo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+33-->[androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5d74e95fb0075f60337058ab4b4b1813\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+34        android:protectionLevel="signature" />
+34-->[androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5d74e95fb0075f60337058ab4b4b1813\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+35
+36    <uses-permission android:name="com.example.odoo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+36-->[androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5d74e95fb0075f60337058ab4b4b1813\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+36-->[androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5d74e95fb0075f60337058ab4b4b1813\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+37
+38    <application
+39        android:name="android.app.Application"
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5d74e95fb0075f60337058ab4b4b1813\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+41        android:debuggable="true"
+42        android:icon="@mipmap/ic_launcher"
+43        android:label="odoo"
+44        android:largeHeap="true"
+44-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-33
+45        android:theme="@style/Theme.AppCompat.NoActionBar" >
+45-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-59
+46        <activity
+47            android:name="com.example.odoo.MainActivity"
+48            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+49            android:exported="true"
+50            android:hardwareAccelerated="true"
+51            android:launchMode="singleTop"
+52            android:theme="@style/LaunchTheme"
+53            android:windowSoftInputMode="adjustResize" >
 54
-55            <intent-filter>
-56                <action android:name="android.intent.action.MAIN" />
-57
-58                <category android:name="android.intent.category.LAUNCHER" />
-59            </intent-filter>
-60        </activity>
-61        <!--
-62             Don't delete the meta-data below.
-63             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-64        -->
-65        <meta-data
-66            android:name="flutterEmbedding"
-67            android:value="2" />
-68
-69        <activity android:name="com.amolg.flutterbarcodescanner.BarcodeCaptureActivity" />
-69-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-91
-69-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:18:19-88
-70
-71        <provider
-71-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
-72            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-72-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
-73            android:authorities="com.example.odoo.flutter.image_provider"
-73-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
-74            android:exported="false"
-74-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
-75            android:grantUriPermissions="true" >
-75-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
-76            <meta-data
-76-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
-77                android:name="android.support.FILE_PROVIDER_PATHS"
-77-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
-78                android:resource="@xml/flutter_image_picker_file_paths" />
-78-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
-79        </provider>
-80
-81        <activity
-81-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\1a7d33a1dd6289df9ecade9fe9e3ac6f\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:23:9-26:75
-82            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-82-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\1a7d33a1dd6289df9ecade9fe9e3ac6f\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:24:13-79
-83            android:exported="false"
-83-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\1a7d33a1dd6289df9ecade9fe9e3ac6f\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:25:13-37
-84            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-84-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\1a7d33a1dd6289df9ecade9fe9e3ac6f\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:26:13-72
-85
-86        <meta-data
-86-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\e400f5504a9bef5c23ec6dbeeb3aa8aa\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:23:9-25:69
-87            android:name="com.google.android.gms.version"
-87-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\e400f5504a9bef5c23ec6dbeeb3aa8aa\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:24:13-58
-88            android:value="@integer/google_play_services_version" />
-88-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\e400f5504a9bef5c23ec6dbeeb3aa8aa\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:25:13-66
-89
-90        <uses-library
-90-->[androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
-91            android:name="androidx.window.extensions"
-91-->[androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
-92            android:required="false" />
-92-->[androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
-93        <uses-library
-93-->[androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
-94            android:name="androidx.window.sidecar"
-94-->[androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
-95            android:required="false" />
-95-->[androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
-96
-97        <provider
-97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
-98            android:name="androidx.startup.InitializationProvider"
-98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:25:13-67
-99            android:authorities="com.example.odoo.androidx-startup"
-99-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:26:13-68
-100            android:exported="false" >
-100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:27:13-37
-101            <meta-data
-101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-102                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-103                android:value="androidx.startup" />
-103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-104        </provider>
-105
-106        <receiver
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-107            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-108            android:directBootAware="false"
-108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-109            android:enabled="true"
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-110            android:exported="true"
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-111            android:permission="android.permission.DUMP" >
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-112            <intent-filter>
-112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-113                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-114            </intent-filter>
-115            <intent-filter>
-115-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-116                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-117            </intent-filter>
-118            <intent-filter>
-118-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-119                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-119-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-119-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-120            </intent-filter>
-121            <intent-filter>
-121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-122                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635b1770925726da461e843c0a3c6641\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-123            </intent-filter>
-124        </receiver>
-125    </application>
+55            <!--
+56                 Specifies an Android theme to apply to this Activity as soon as
+57                 the Android process has started. This theme is visible to the user
+58                 while the Flutter UI initializes. After that, this theme continues
+59                 to determine the Window background behind the Flutter UI.
+60            -->
+61            <meta-data
+62                android:name="io.flutter.embedding.android.NormalTheme"
+63                android:resource="@style/NormalTheme" />
+64
+65            <intent-filter>
+66                <action android:name="android.intent.action.MAIN" />
+67
+68                <category android:name="android.intent.category.LAUNCHER" />
+69            </intent-filter>
+70        </activity>
+71        <!--
+72             Don't delete the meta-data below.
+73             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+74        -->
+75        <meta-data
+76            android:name="flutterEmbedding"
+77            android:value="2" />
+78
+79        <service
+79-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-19:72
+80            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
+80-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-107
+81            android:exported="false"
+81-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
+82            android:permission="android.permission.BIND_JOB_SERVICE" />
+82-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-69
+83        <service
+83-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:20:9-26:19
+84            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
+84-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-97
+85            android:exported="false" >
+85-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-37
+86            <intent-filter>
+86-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:29
+87                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+87-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-78
+87-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:25-75
+88            </intent-filter>
+89        </service>
+90
+91        <receiver
+91-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:28:9-35:20
+92            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
+92-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-98
+93            android:exported="true"
+93-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-36
+94            android:permission="com.google.android.c2dm.permission.SEND" >
+94-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:31:13-73
+95            <intent-filter>
+95-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-34:29
+96                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+96-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:17-81
+96-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:25-78
+97            </intent-filter>
+98        </receiver>
+99
+100        <service
+100-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-41:19
+101            android:name="com.google.firebase.components.ComponentDiscoveryService"
+101-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:37:18-89
+102            android:directBootAware="true"
+102-->[com.google.firebase:firebase-common:20.3.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\284fd5eeca4a29a0814ba444369e2acf\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:34:13-43
+103            android:exported="false" >
+103-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\09d8459ba415a5541dd918751c843e39\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:54:13-37
+104            <meta-data
+104-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:38:13-40:85
+105                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
+105-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:39:17-128
+106                android:value="com.google.firebase.components.ComponentRegistrar" />
+106-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:40:17-82
+107            <meta-data
+107-->[:firebase_core] E:\Odoo\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+108                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+108-->[:firebase_core] E:\Odoo\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+109                android:value="com.google.firebase.components.ComponentRegistrar" />
+109-->[:firebase_core] E:\Odoo\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+110            <meta-data
+110-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\09d8459ba415a5541dd918751c843e39\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:55:13-57:85
+111                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+111-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\09d8459ba415a5541dd918751c843e39\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:56:17-119
+112                android:value="com.google.firebase.components.ComponentRegistrar" />
+112-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\09d8459ba415a5541dd918751c843e39\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:57:17-82
+113            <meta-data
+113-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\7a3c4ebf2397b283885d676a98badbb2\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:32:13-34:85
+114                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+114-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\7a3c4ebf2397b283885d676a98badbb2\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:33:17-96
+115                android:value="com.google.firebase.components.ComponentRegistrar" />
+115-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\7a3c4ebf2397b283885d676a98badbb2\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:34:17-82
+116            <meta-data
+116-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5a04a59768dbef76c9a94429546de2a1\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:31:13-33:85
+117                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+117-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5a04a59768dbef76c9a94429546de2a1\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:32:17-139
+118                android:value="com.google.firebase.components.ComponentRegistrar" />
+118-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5a04a59768dbef76c9a94429546de2a1\transformed\jetified-play-services-measurement-api-21.3.0\AndroidManifest.xml:33:17-82
+119            <meta-data
+119-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\HP 840 G3\.gradle\caches\transforms-3\984bb6232f18c5f046bd81aceaf2d212\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:17:13-19:85
+120                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+120-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\HP 840 G3\.gradle\caches\transforms-3\984bb6232f18c5f046bd81aceaf2d212\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:18:17-127
+121                android:value="com.google.firebase.components.ComponentRegistrar" />
+121-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\HP 840 G3\.gradle\caches\transforms-3\984bb6232f18c5f046bd81aceaf2d212\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:19:17-82
+122            <meta-data
+122-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b7e8a2b8dfcc6e63342ab44b2dbe8c44\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+123                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+123-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b7e8a2b8dfcc6e63342ab44b2dbe8c44\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
+124                android:value="com.google.firebase.components.ComponentRegistrar" />
+124-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b7e8a2b8dfcc6e63342ab44b2dbe8c44\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+125        </service>
 126
-127</manifest>
+127        <provider
+127-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:43:9-47:38
+128            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
+128-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:44:13-102
+129            android:authorities="com.example.odoo.flutterfirebasemessaginginitprovider"
+129-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:45:13-88
+130            android:exported="false"
+130-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:46:13-37
+131            android:initOrder="99" />
+131-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:47:13-35
+132
+133        <activity android:name="com.amolg.flutterbarcodescanner.BarcodeCaptureActivity" />
+133-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-91
+133-->[:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:18:19-88
+134
+135        <provider
+135-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+136            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+136-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
+137            android:authorities="com.example.odoo.flutter.image_provider"
+137-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
+138            android:exported="false"
+138-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+139            android:grantUriPermissions="true" >
+139-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+140            <meta-data
+140-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
+141                android:name="android.support.FILE_PROVIDER_PATHS"
+141-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+142                android:resource="@xml/flutter_image_picker_file_paths" />
+142-->[:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
+143        </provider>
+144
+145        <receiver
+145-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-18:40
+146            android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver"
+146-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-91
+147            android:exported="false" />
+147-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
+148        <receiver
+148-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:19:9-21:40
+149            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
+149-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-97
+150            android:exported="false" />
+150-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-37
+151        <receiver
+151-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:22:9-31:20
+152            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+152-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-101
+153            android:exported="false" >
+153-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+154            <intent-filter>
+154-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-30:29
+155                <action android:name="android.intent.action.BOOT_COMPLETED" />
+155-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:17-79
+155-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:25-76
+156                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+156-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-84
+156-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-81
+157                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+157-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-82
+157-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:28:25-79
+158                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+158-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-82
+158-->[:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:25-79
+159            </intent-filter>
+160        </receiver>
+161
+162        <activity
+162-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2059921191d4acbb9f1b9ad3b6710ac6\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:23:9-27:75
+163            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+163-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2059921191d4acbb9f1b9ad3b6710ac6\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:24:13-93
+164            android:excludeFromRecents="true"
+164-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2059921191d4acbb9f1b9ad3b6710ac6\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:25:13-46
+165            android:exported="false"
+165-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2059921191d4acbb9f1b9ad3b6710ac6\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:26:13-37
+166            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+166-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2059921191d4acbb9f1b9ad3b6710ac6\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:27:13-72
+167        <!--
+168            Service handling Google Sign-In user revocation. For apps that do not integrate with
+169            Google Sign-In, this service will never be started.
+170        -->
+171        <service
+171-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2059921191d4acbb9f1b9ad3b6710ac6\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:33:9-37:51
+172            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+172-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2059921191d4acbb9f1b9ad3b6710ac6\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:34:13-89
+173            android:exported="true"
+173-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2059921191d4acbb9f1b9ad3b6710ac6\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:35:13-36
+174            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+174-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2059921191d4acbb9f1b9ad3b6710ac6\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:36:13-107
+175            android:visibleToInstantApps="true" />
+175-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2059921191d4acbb9f1b9ad3b6710ac6\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:37:13-48
+176
+177        <receiver
+177-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\09d8459ba415a5541dd918751c843e39\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:31:9-38:20
+178            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+178-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\09d8459ba415a5541dd918751c843e39\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:32:13-78
+179            android:exported="true"
+179-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\09d8459ba415a5541dd918751c843e39\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:33:13-36
+180            android:permission="com.google.android.c2dm.permission.SEND" >
+180-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\09d8459ba415a5541dd918751c843e39\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:34:13-73
+181            <intent-filter>
+181-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-34:29
+182                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+182-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:17-81
+182-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:25-78
+183            </intent-filter>
+184        </receiver>
+185        <!--
+186             FirebaseMessagingService performs security checks at runtime,
+187             but set to not exported to explicitly avoid allowing another app to call it.
+188        -->
+189        <service
+189-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\09d8459ba415a5541dd918751c843e39\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:44:9-51:19
+190            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+190-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\09d8459ba415a5541dd918751c843e39\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:45:13-82
+191            android:directBootAware="true"
+191-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\09d8459ba415a5541dd918751c843e39\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:46:13-43
+192            android:exported="false" >
+192-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\09d8459ba415a5541dd918751c843e39\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:47:13-37
+193            <intent-filter android:priority="-500" >
+193-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:29
+194                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+194-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-78
+194-->[:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:25-75
+195            </intent-filter>
+196        </service>
+197
+198        <activity
+198-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\f253648b0be692c533908993735bbd2e\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+199            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+199-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\f253648b0be692c533908993735bbd2e\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+200            android:exported="false"
+200-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\f253648b0be692c533908993735bbd2e\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+201            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+201-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\f253648b0be692c533908993735bbd2e\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+202
+203        <provider
+203-->[com.google.firebase:firebase-common:20.3.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\284fd5eeca4a29a0814ba444369e2acf\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:25:9-30:39
+204            android:name="com.google.firebase.provider.FirebaseInitProvider"
+204-->[com.google.firebase:firebase-common:20.3.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\284fd5eeca4a29a0814ba444369e2acf\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:26:13-77
+205            android:authorities="com.example.odoo.firebaseinitprovider"
+205-->[com.google.firebase:firebase-common:20.3.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\284fd5eeca4a29a0814ba444369e2acf\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:27:13-72
+206            android:directBootAware="true"
+206-->[com.google.firebase:firebase-common:20.3.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\284fd5eeca4a29a0814ba444369e2acf\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:28:13-43
+207            android:exported="false"
+207-->[com.google.firebase:firebase-common:20.3.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\284fd5eeca4a29a0814ba444369e2acf\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:29:13-37
+208            android:initOrder="100" />
+208-->[com.google.firebase:firebase-common:20.3.2] C:\Users\HP 840 G3\.gradle\caches\transforms-3\284fd5eeca4a29a0814ba444369e2acf\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:30:13-36
+209
+210        <receiver
+210-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:29:9-33:20
+211            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+211-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:30:13-85
+212            android:enabled="true"
+212-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:31:13-35
+213            android:exported="false" >
+213-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:32:13-37
+214        </receiver>
+215
+216        <service
+216-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:35:9-38:40
+217            android:name="com.google.android.gms.measurement.AppMeasurementService"
+217-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:36:13-84
+218            android:enabled="true"
+218-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:37:13-35
+219            android:exported="false" />
+219-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:38:13-37
+220        <service
+220-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:39:9-43:72
+221            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+221-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:40:13-87
+222            android:enabled="true"
+222-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:41:13-35
+223            android:exported="false"
+223-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:42:13-37
+224            android:permission="android.permission.BIND_JOB_SERVICE" />
+224-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b00981f9f6519a10f9b5d1ffa94b525e\transformed\jetified-play-services-measurement-21.3.0\AndroidManifest.xml:43:13-69
+225
+226        <meta-data
+226-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2c79f1bef2248086e00abbcc39fc0574\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:21:9-23:69
+227            android:name="com.google.android.gms.version"
+227-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2c79f1bef2248086e00abbcc39fc0574\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:22:13-58
+228            android:value="@integer/google_play_services_version" />
+228-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2c79f1bef2248086e00abbcc39fc0574\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:23:13-66
+229
+230        <uses-library
+230-->[androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\003a22a5515e1f77f89701a46efbc2ec\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+231            android:name="androidx.window.extensions"
+231-->[androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\003a22a5515e1f77f89701a46efbc2ec\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+232            android:required="false" />
+232-->[androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\003a22a5515e1f77f89701a46efbc2ec\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+233        <uses-library
+233-->[androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\003a22a5515e1f77f89701a46efbc2ec\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+234            android:name="androidx.window.sidecar"
+234-->[androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\003a22a5515e1f77f89701a46efbc2ec\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+235            android:required="false" />
+235-->[androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\003a22a5515e1f77f89701a46efbc2ec\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+236
+237        <service
+237-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\caef097eb0c2cd1082e8114d49c41ec0\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
+238            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+238-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\caef097eb0c2cd1082e8114d49c41ec0\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
+239            android:exported="false" >
+239-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\caef097eb0c2cd1082e8114d49c41ec0\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+240            <meta-data
+240-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\caef097eb0c2cd1082e8114d49c41ec0\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
+241                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+241-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\caef097eb0c2cd1082e8114d49c41ec0\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
+242                android:value="cct" />
+242-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\caef097eb0c2cd1082e8114d49c41ec0\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
+243        </service>
+244        <service
+244-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\d97736817588d35e875979bb74338a17\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+245            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+245-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\d97736817588d35e875979bb74338a17\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
+246            android:exported="false"
+246-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\d97736817588d35e875979bb74338a17\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+247            android:permission="android.permission.BIND_JOB_SERVICE" >
+247-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\d97736817588d35e875979bb74338a17\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+248        </service>
+249
+250        <receiver
+250-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\d97736817588d35e875979bb74338a17\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
+251            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+251-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\d97736817588d35e875979bb74338a17\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+252            android:exported="false" />
+252-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\d97736817588d35e875979bb74338a17\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
+253
+254        <provider
+254-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+255            android:name="androidx.startup.InitializationProvider"
+255-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:25:13-67
+256            android:authorities="com.example.odoo.androidx-startup"
+256-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:26:13-68
+257            android:exported="false" >
+257-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:27:13-37
+258            <meta-data
+258-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+259                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+259-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+260                android:value="androidx.startup" />
+260-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+261        </provider>
+262
+263        <receiver
+263-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+264            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+264-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+265            android:directBootAware="false"
+265-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+266            android:enabled="true"
+266-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+267            android:exported="true"
+267-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+268            android:permission="android.permission.DUMP" >
+268-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+269            <intent-filter>
+269-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+270                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+270-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+270-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+271            </intent-filter>
+272            <intent-filter>
+272-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+273                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+273-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+273-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+274            </intent-filter>
+275            <intent-filter>
+275-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+276                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+276-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+276-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+277            </intent-filter>
+278            <intent-filter>
+278-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+279                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+279-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+279-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+280            </intent-filter>
+281        </receiver>
+282    </application>
+283
+284</manifest>

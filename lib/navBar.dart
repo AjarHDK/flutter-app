@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:odoo/dashboardPage.dart';
+import 'fournisseurPage.dart';
 import 'package:odoo/product_page.dart';
 import 'user_page.dart';
 import 'stockPage.dart';
@@ -7,6 +8,7 @@ import 'Reception.dart';
 import 'livraison.dart';
 import 'transfer.dart';
 import 'approvisonnement.dart';
+import 'rapport.dart';
 
 class NavBar extends StatelessWidget {
   NavBar();
@@ -32,7 +34,12 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.dashboard),
             title: Text('Dashbord'),
-            onTap: () => print('dash'),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DashboardPage()),
+              ),
+            },
           ),
           ListTile(
             leading: Icon(Icons.person),
@@ -67,7 +74,12 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.people),
             title: Text('Fournisseur'),
-            onTap: () => print('four'),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => FournisseurPage()),
+              ),
+            },
           ),
           ListTile(
             leading: Icon(Icons.check_box),
@@ -101,7 +113,17 @@ class NavBar extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.location_on),
+            leading: Icon(Icons.description),
+            title: Text('Rapport'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => RapportPage()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.sync),
             title: Text('Reaprovisonnement'),
             onTap: () => {
               Navigator.push(
@@ -109,11 +131,6 @@ class NavBar extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => ApprovisonnementPage()),
               ),
             },
-          ),
-          ListTile(
-            leading: Icon(Icons.insert_chart),
-            title: Text('Rapport'),
-            onTap: () => print('RP'),
           ),
           ListTile(
             leading: Icon(Icons.settings),

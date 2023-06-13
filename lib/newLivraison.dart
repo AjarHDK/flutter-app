@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'auth.dart';
+import 'notification_helper.dart';
 
 class ProductTemplate {
   final int id;
@@ -15,7 +16,7 @@ class NewLivraisonPage extends StatefulWidget {
 
 class _NewLivraisonPageState extends State<NewLivraisonPage> {
   final orpc = Auth.orpc;
-  TextEditingController productQtyController = TextEditingController();
+
   TextEditingController quantityDoneController = TextEditingController();
   DateTime createDate = DateTime.now();
   DateTime createTime = DateTime.now();
@@ -23,10 +24,14 @@ class _NewLivraisonPageState extends State<NewLivraisonPage> {
   DateTime writeTime = DateTime.now();
   List<ProductTemplate> _productTemplates = [];
   List<ProductTemplate> _productPickingTemplates = [];
-  List<ProductTemplate> _productDestinationTemplates = [];
+  List<ProductTemplate> _productLocationTemplates = [];
+
   int? _selectedProductId;
   int? _selectedPickingTypeId;
   int? _selectedDestinationId;
+  int? _selectedLocationId;
+  List<ProductTemplate> _productDestinationTemplates = [];
+
   bool isSubmitButtonEnabled = false;
   bool isSubmitButtonEnabledDraft = false;
 
@@ -36,14 +41,15 @@ class _NewLivraisonPageState extends State<NewLivraisonPage> {
     getProductTemplates();
     getPickingTypeIds();
     getDestinationIds();
-    productQtyController.addListener(updateSubmitButtonStatus);
+    getLocationIds();
+
     quantityDoneController.addListener(updateSubmitButtonStatus);
   }
 
   @override
   void dispose() {
     // Dispose of the text editing controllers
-    productQtyController.dispose();
+
     quantityDoneController.dispose();
     super.dispose();
   }
@@ -51,10 +57,8 @@ class _NewLivraisonPageState extends State<NewLivraisonPage> {
   void updateSubmitButtonStatus() {
     setState(() {
       // Update the enabled status of the submit button based on the text fields' values
-      isSubmitButtonEnabledDraft = productQtyController.text.isNotEmpty &&
-          quantityDoneController.text.isEmpty;
-      isSubmitButtonEnabled = productQtyController.text.isNotEmpty &&
-          quantityDoneController.text.isNotEmpty;
+      isSubmitButtonEnabledDraft = quantityDoneController.text.isEmpty;
+      isSubmitButtonEnabled = quantityDoneController.text.isNotEmpty;
     });
   }
 
@@ -128,6 +132,28 @@ class _NewLivraisonPageState extends State<NewLivraisonPage> {
     });
   }
 
+  Future<void> getLocationIds() async {
+    String modelProduct = 'stock.location';
+    List<dynamic> results = await orpc?.callKw({
+      'model': modelProduct,
+      'method': 'search_read',
+      'args': [
+        [],
+        ['id', 'complete_name'],
+      ],
+      'kwargs': {},
+    });
+
+    setState(() {
+      _productLocationTemplates = results
+          .map((record) => ProductTemplate(
+                id: record['id'],
+                name: record['complete_name'],
+              ))
+          .toList();
+    });
+  }
+
   void showCustomDialog(BuildContext context, String message) {
     showDialog(
       context: context,
@@ -162,16 +188,11 @@ class _NewLivraisonPageState extends State<NewLivraisonPage> {
       'method': 'create',
       'args': [
         {
-          'origin': false,
-          'note': false,
-          'move_type': 'direct',
-          'state': 'done',
-          'location_id': 4,
+          'location_id': _selectedLocationId,
           'location_dest_id': _selectedDestinationId,
           'picking_type_id': _selectedPickingTypeId,
           'picking_type_code': 'outgoing',
-          'use_create_lots': true,
-          'use_existing_lots': false,
+
           'create_date': DateTime(
             createDate.year,
             createDate.month,
@@ -190,20 +211,18 @@ class _NewLivraisonPageState extends State<NewLivraisonPage> {
       ],
       'kwargs': {},
     });
-    int productQty = productQtyController.text.isNotEmpty
-        ? int.parse(productQtyController.text)
-        : 0;
 
     int moveLineId = await orpc?.callKw({
       'model': modelMove,
       'method': 'create',
       'args': [
         {
+          'location_id': _selectedLocationId,
+          'location_dest_id': _selectedDestinationId,
           'picking_id': newPickingId,
           'product_id': _selectedProductId,
-          'product_uom_qty': productQty, // User input for product_uom_qty
-          'location_id': 4, // Source location
-          'location_dest_id': _selectedDestinationId, // Destination location
+          // User input for product_uom_qty
+          // / Destination location
           'name': 'Move Line Description', // Description of the move line
         },
       ],
@@ -224,23 +243,22 @@ class _NewLivraisonPageState extends State<NewLivraisonPage> {
       'kwargs': {},
     });
 
-    await orpc?.callKw({
-      'model': modelPicking,
-      'method': 'action_confirm',
-      'args': [
-        [newPickingId],
-      ],
-      'kwargs': {},
-    });
+    try {
+      await orpc?.callKw({
+        'model': modelPicking,
+        'method': 'button_validate',
+        'args': [
+          [newPickingId],
+        ],
+        'kwargs': {},
+      });
 
-    await orpc?.callKw({
-      'model': modelPicking,
-      'method': 'button_validate',
-      'args': [
-        [newPickingId],
-      ],
-      'kwargs': {},
-    });
+      await NotificationHelper.checkProductQuantity();
+
+      // Navigate to the RapportPage
+    } catch (e) {
+      print('Error validating picking: $e');
+    }
 
     print('New reception record ID: $newPickingId');
     showCustomDialog(context, message);
@@ -260,16 +278,11 @@ class _NewLivraisonPageState extends State<NewLivraisonPage> {
       'method': 'create',
       'args': [
         {
-          'origin': false,
-          'note': false,
-          'move_type': 'direct',
-          'state': 'done',
-          'location_id': 4,
+          'location_id': _selectedLocationId,
           'location_dest_id': _selectedDestinationId,
           'picking_type_id': _selectedPickingTypeId,
-          'picking_type_code': 'incoming',
-          'use_create_lots': true,
-          'use_existing_lots': false,
+          'picking_type_code': 'outgoing',
+
           'create_date': DateTime(
             createDate.year,
             createDate.month,
@@ -288,20 +301,19 @@ class _NewLivraisonPageState extends State<NewLivraisonPage> {
       ],
       'kwargs': {},
     });
-    int productQty = productQtyController.text.isNotEmpty
-        ? int.parse(productQtyController.text)
-        : 0;
 
     int moveLineId = await orpc?.callKw({
       'model': modelMove,
       'method': 'create',
       'args': [
         {
+          'location_id': _selectedLocationId,
+          // 'location_dest_id': _selectedDestinationId,
           'picking_id': newPickingId,
           'product_id': _selectedProductId,
-          'product_uom_qty': productQty, // User input for product_uom_qty
-          'location_id': 4, // Source location
-          'location_dest_id': _selectedDestinationId, // Destination location
+          //  / User input for product_uom_qty
+
+          // Destination location
           'name': 'Move Line Description', // Description of the move line
         },
       ],
@@ -395,9 +407,8 @@ class _NewLivraisonPageState extends State<NewLivraisonPage> {
 
   @override
   Widget build(BuildContext context) {
-    bool isProductQtyFilled = productQtyController.text.isNotEmpty;
     bool isQtyDoneFilled = quantityDoneController.text.isNotEmpty;
-    bool isSubmitButtonEnabled = isProductQtyFilled && isQtyDoneFilled;
+    bool isSubmitButtonEnabled = isQtyDoneFilled;
 
     return Scaffold(
       appBar: AppBar(
@@ -459,11 +470,21 @@ class _NewLivraisonPageState extends State<NewLivraisonPage> {
                   labelText: 'Destination',
                 ),
               ),
-              TextField(
-                controller: productQtyController,
-                keyboardType: TextInputType.number,
+              DropdownButtonFormField<int>(
+                value: _selectedLocationId,
+                onChanged: (value) {
+                  setState(() {
+                    _selectedLocationId = value;
+                  });
+                },
+                items: _productLocationTemplates
+                    .map((template) => DropdownMenuItem<int>(
+                          value: template.id,
+                          child: Text(template.name),
+                        ))
+                    .toList(),
                 decoration: InputDecoration(
-                  labelText: 'Product UOM Quantity',
+                  labelText: 'origine',
                 ),
               ),
               TextField(
@@ -514,13 +535,6 @@ class _NewLivraisonPageState extends State<NewLivraisonPage> {
                         'Livraison created in draft mode')
                     : null,
                 child: Text('brouillon'),
-              ),
-              ElevatedButton(
-                onPressed: isSubmitButtonEnabled
-                    ? () =>
-                        createPickingRecordPart2("Livraison marked as to do")
-                    : null,
-                child: Text('Marquer comme a faire'),
               ),
               ElevatedButton(
                 onPressed: isSubmitButtonEnabled

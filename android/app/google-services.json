@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "733318571186",
+    "project_id": "app-odoo",
+    "storage_bucket": "app-odoo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733318571186:android:6f21e00f8f68dc3f8115ab",
+        "android_client_info": {
+          "package_name": "com.example.odoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733318571186-1dc54d7fr6hbso6coisrj3lae2gnf20r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw9o-AVrXHFUAxL-2eL-sLuBCMulb0drM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733318571186-1dc54d7fr6hbso6coisrj3lae2gnf20r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
