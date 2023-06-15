@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.odoo.app-mergeDebugResources-37:/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "com.example.odoo.app-mergeDebugResources-41:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HP 840 G3\\.gradle\\caches\\transforms-3\\bcb71054ade2de7f4dfaf698597f55fe\\transformed\\appcompat-1.2.0\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\Users\\HP 840 G3\\.gradle\\caches\\transforms-3\\5f0ad372327de02c707f7430e51961d6\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

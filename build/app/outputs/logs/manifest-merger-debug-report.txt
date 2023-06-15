@@ -11,6 +11,10 @@ MERGED from [:image_picker_android] E:\Odoo\build\image_picker_android\intermedi
 MERGED from [:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
 MERGED from [:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-32:19
 MERGED from [:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-32:19
+MERGED from [:url_launcher_android] E:\Odoo\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-14:19
+MERGED from [:url_launcher_android] E:\Odoo\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-14:19
+MERGED from [:open_file] E:\Odoo\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-21:19
+MERGED from [:open_file] E:\Odoo\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-21:19
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\6a31700874d8768c1a72a6f7d5d446cb\transformed\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\6a31700874d8768c1a72a6f7d5d446cb\transformed\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5dcda7370fe2370207662fa80717ddea\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
@@ -63,10 +67,14 @@ MERGED from [com.google.android.gms:play-services-measurement-base:21.3.0] C:\Us
 MERGED from [com.google.android.gms:play-services-measurement-base:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b070e0322b0ce30988123dd114fc1e88\transformed\jetified-play-services-measurement-base-21.3.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-basement:18.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2c79f1bef2248086e00abbcc39fc0574\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.google.android.gms:play-services-basement:18.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2c79f1bef2248086e00abbcc39fc0574\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\da24b2c9b78ceeb51433bb8918b899ac\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\da24b2c9b78ceeb51433bb8918b899ac\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\003a22a5515e1f77f89701a46efbc2ec\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\003a22a5515e1f77f89701a46efbc2ec\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5d74e95fb0075f60337058ab4b4b1813\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
 MERGED from [androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5d74e95fb0075f60337058ab4b4b1813\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\3cb66db2df9df1b175ea812e7cb5772a\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\3cb66db2df9df1b175ea812e7cb5772a\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:23:5-33:19
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\caef097eb0c2cd1082e8114d49c41ec0\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:27:5-35:19
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\caef097eb0c2cd1082e8114d49c41ec0\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:27:5-35:19
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\d97736817588d35e875979bb74338a17\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:25:5-39:19
@@ -91,18 +99,22 @@ INJECTED from E:\Odoo\android\app\src\main\AndroidManifest.xml:1:1-33:12
 INJECTED from E:\Odoo\android\app\src\main\AndroidManifest.xml:1:1-33:12
 INJECTED from E:\Odoo\android\app\src\main\AndroidManifest.xml:1:1-33:12
 MERGED from E:\Odoo\android\app\src\main\AndroidManifest.xml:1:1-33:12
-MERGED from [:shared_preferences_android] E:\Odoo\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-50:12
 MERGED from [:firebase_core] E:\Odoo\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:flutter_barcode_scanner] E:\Odoo\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-21:12
 MERGED from [:image_picker_android] E:\Odoo\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-21:12
 MERGED from [:flutter_plugin_android_lifecycle] E:\Odoo\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-34:12
-MERGED from [:fluttertoast] E:\Odoo\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:url_launcher_android] E:\Odoo\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-16:12
+MERGED from [:path_provider_android] E:\Odoo\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:google_sign_in_android] E:\Odoo\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:shared_preferences_android] E:\Odoo\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:open_file] E:\Odoo\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-23:12
+MERGED from [:fluttertoast] E:\Odoo\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\6a31700874d8768c1a72a6f7d5d446cb\transformed\material-1.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5dcda7370fe2370207662fa80717ddea\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\bcb71054ade2de7f4dfaf698597f55fe\transformed\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\79f9f4cb4434ac903f09ee2af84b31c8\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5f0ad372327de02c707f7430e51961d6\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\eec09eecbe0fa6cd83e44a6863e8f9ef\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-auth:20.5.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2059921191d4acbb9f1b9ad3b6710ac6\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:17:1-40:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\8be57a0ab0019d21959acbe59147477f\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -135,13 +147,11 @@ MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] C:\User
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\0a64267ef32c061a4423059ff0a156fd\transformed\jetified-play-services-measurement-sdk-api-21.3.0\AndroidManifest.xml:17:1-28:12
 MERGED from [com.google.android.gms:play-services-measurement-base:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b070e0322b0ce30988123dd114fc1e88\transformed\jetified-play-services-measurement-base-21.3.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:18.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2c79f1bef2248086e00abbcc39fc0574\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:16:1-26:12
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\71ea4278965e781745d92d30a8289349\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\HP 840 G3\.gradle\caches\transforms-3\f29b3728f201bed6dcd0cec88984c144\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.7.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\92ea5a87f7ada758f347c92ee177be38\transformed\jetified-activity-1.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.media:media:1.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\69268b5e3785bd8f6c072469c189ef19\transformed\media-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\3c0e35d493ccd3f2bb8b07f96b013b9c\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
-MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c8beb8b33cbbd21eda43ffa156119548\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\e1f41204c6edf26f7392360fbcfea88b\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c509b9e3fe4b622170021d255a2c783f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2ea9073713b1467809742a7428477261\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\fd791e784c4b2f2341eb254a85e9c4e9\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\26f54b1ad2673450e1b789c1839045bd\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -149,18 +159,22 @@ MERGED from [androidx.transition:transition:1.2.0] C:\Users\HP 840 G3\.gradle\ca
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\a17e773190db00ea092ba2e8905c920c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\756cd2d44932be69afd0d7376b4d366c\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\a458d9faa8fd984eea3189ac2268b4a3\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\4784b4855fb8c719a7e70c51ab3b37cf\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c509b9e3fe4b622170021d255a2c783f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\a2865fe33e16ee3047cda5a689a86757\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\da24b2c9b78ceeb51433bb8918b899ac\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c4fde93606d3e34ad3154258ed2df472\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\003a22a5515e1f77f89701a46efbc2ec\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\4784b4855fb8c719a7e70c51ab3b37cf\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\9fda6bdf8390f3fd523df9fd4794eebd\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\9923d4709fde27813648995398a2735d\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\23fcf1193049ddd5443fe7705e639cbd\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\816d951c6c66042300d6d0ecf41a77b9\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\7944fe006c48f23f73cde69789677a17\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c4fde93606d3e34ad3154258ed2df472\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5d74e95fb0075f60337058ab4b4b1813\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b253abfc747a638a3e44a31d80beb1c5\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\8b22212788e0b8d25a3b771e8985e15c\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\3cb66db2df9df1b175ea812e7cb5772a\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\64b8ffec8dd4154ac1e3614196f8ec4b\transformed\lifecycle-livedata-core-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\8b22212788e0b8d25a3b771e8985e15c\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b3d73607d96030893210d8ac7d317700\transformed\lifecycle-viewmodel-2.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\fd2525d8e729e998fcd94c2fe920a70e\transformed\lifecycle-runtime-2.6.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\04893cd2503497ff301071e96c8684d2\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.1\AndroidManifest.xml:17:1-22:12
@@ -174,8 +188,8 @@ MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\408fee4ac8da76fdf24102328ceae444\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\0713eab75ca7cd45ddd76803b44b278c\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-components:17.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\06d336d442de1337e4e779a065ff9011\transformed\jetified-firebase-components-17.1.0\AndroidManifest.xml:15:1-22:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635ad80c5c3146b24e3162c16562e75f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\ae43efc68bc8e0674a9ac80cc9a0aeab\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635ad80c5c3146b24e3162c16562e75f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\412ea1747794f8ba402872c982c507b3\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\6f3d55ddef78723554205d602231003a\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:15:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\32c376f3db9496fb410aa857524de6c4\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -204,8 +218,6 @@ uses-sdk
 INJECTED from E:\Odoo\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\Odoo\android\app\src\main\AndroidManifest.xml
 INJECTED from E:\Odoo\android\app\src\main\AndroidManifest.xml
-MERGED from [:shared_preferences_android] E:\Odoo\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:shared_preferences_android] E:\Odoo\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_messaging] E:\Odoo\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_core] E:\Odoo\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
@@ -218,16 +230,26 @@ MERGED from [:flutter_plugin_android_lifecycle] E:\Odoo\build\flutter_plugin_and
 MERGED from [:flutter_plugin_android_lifecycle] E:\Odoo\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:fluttertoast] E:\Odoo\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:fluttertoast] E:\Odoo\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] E:\Odoo\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] E:\Odoo\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] E:\Odoo\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] E:\Odoo\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:google_sign_in_android] E:\Odoo\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:google_sign_in_android] E:\Odoo\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] E:\Odoo\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] E:\Odoo\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:open_file] E:\Odoo\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
+MERGED from [:open_file] E:\Odoo\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
+MERGED from [:fluttertoast] E:\Odoo\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:fluttertoast] E:\Odoo\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\6a31700874d8768c1a72a6f7d5d446cb\transformed\material-1.3.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\6a31700874d8768c1a72a6f7d5d446cb\transformed\material-1.3.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5dcda7370fe2370207662fa80717ddea\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5dcda7370fe2370207662fa80717ddea\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\bcb71054ade2de7f4dfaf698597f55fe\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\bcb71054ade2de7f4dfaf698597f55fe\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\79f9f4cb4434ac903f09ee2af84b31c8\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\79f9f4cb4434ac903f09ee2af84b31c8\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5f0ad372327de02c707f7430e51961d6\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5f0ad372327de02c707f7430e51961d6\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\eec09eecbe0fa6cd83e44a6863e8f9ef\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\eec09eecbe0fa6cd83e44a6863e8f9ef\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:20.5.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2059921191d4acbb9f1b9ad3b6710ac6\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:20:5-44
@@ -292,20 +314,16 @@ MERGED from [com.google.android.gms:play-services-measurement-base:21.3.0] C:\Us
 MERGED from [com.google.android.gms:play-services-measurement-base:21.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b070e0322b0ce30988123dd114fc1e88\transformed\jetified-play-services-measurement-base-21.3.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-basement:18.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2c79f1bef2248086e00abbcc39fc0574\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:18:5-43
 MERGED from [com.google.android.gms:play-services-basement:18.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2c79f1bef2248086e00abbcc39fc0574\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:18:5-43
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\71ea4278965e781745d92d30a8289349\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\71ea4278965e781745d92d30a8289349\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\HP 840 G3\.gradle\caches\transforms-3\f29b3728f201bed6dcd0cec88984c144\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\HP 840 G3\.gradle\caches\transforms-3\f29b3728f201bed6dcd0cec88984c144\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.7.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\92ea5a87f7ada758f347c92ee177be38\transformed\jetified-activity-1.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.7.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\92ea5a87f7ada758f347c92ee177be38\transformed\jetified-activity-1.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\69268b5e3785bd8f6c072469c189ef19\transformed\media-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.media:media:1.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\69268b5e3785bd8f6c072469c189ef19\transformed\media-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\3c0e35d493ccd3f2bb8b07f96b013b9c\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\3c0e35d493ccd3f2bb8b07f96b013b9c\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c8beb8b33cbbd21eda43ffa156119548\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c8beb8b33cbbd21eda43ffa156119548\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\e1f41204c6edf26f7392360fbcfea88b\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\e1f41204c6edf26f7392360fbcfea88b\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c509b9e3fe4b622170021d255a2c783f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c509b9e3fe4b622170021d255a2c783f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2ea9073713b1467809742a7428477261\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2ea9073713b1467809742a7428477261\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\fd791e784c4b2f2341eb254a85e9c4e9\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
@@ -320,10 +338,18 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\HP 840 G3\.g
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\756cd2d44932be69afd0d7376b4d366c\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\a458d9faa8fd984eea3189ac2268b4a3\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\a458d9faa8fd984eea3189ac2268b4a3\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\4784b4855fb8c719a7e70c51ab3b37cf\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\4784b4855fb8c719a7e70c51ab3b37cf\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c509b9e3fe4b622170021d255a2c783f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c509b9e3fe4b622170021d255a2c783f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\a2865fe33e16ee3047cda5a689a86757\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\a2865fe33e16ee3047cda5a689a86757\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\da24b2c9b78ceeb51433bb8918b899ac\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\da24b2c9b78ceeb51433bb8918b899ac\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c4fde93606d3e34ad3154258ed2df472\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c4fde93606d3e34ad3154258ed2df472\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\003a22a5515e1f77f89701a46efbc2ec\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\003a22a5515e1f77f89701a46efbc2ec\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\4784b4855fb8c719a7e70c51ab3b37cf\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\4784b4855fb8c719a7e70c51ab3b37cf\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\9fda6bdf8390f3fd523df9fd4794eebd\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\9fda6bdf8390f3fd523df9fd4794eebd\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\9923d4709fde27813648995398a2735d\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -334,16 +360,16 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\HP 8
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\816d951c6c66042300d6d0ecf41a77b9\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\7944fe006c48f23f73cde69789677a17\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\7944fe006c48f23f73cde69789677a17\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c4fde93606d3e34ad3154258ed2df472\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\c4fde93606d3e34ad3154258ed2df472\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5d74e95fb0075f60337058ab4b4b1813\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5d74e95fb0075f60337058ab4b4b1813\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b253abfc747a638a3e44a31d80beb1c5\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b253abfc747a638a3e44a31d80beb1c5\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\8b22212788e0b8d25a3b771e8985e15c\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\8b22212788e0b8d25a3b771e8985e15c\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\3cb66db2df9df1b175ea812e7cb5772a\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\3cb66db2df9df1b175ea812e7cb5772a\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:21:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\64b8ffec8dd4154ac1e3614196f8ec4b\transformed\lifecycle-livedata-core-2.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\64b8ffec8dd4154ac1e3614196f8ec4b\transformed\lifecycle-livedata-core-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\8b22212788e0b8d25a3b771e8985e15c\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\8b22212788e0b8d25a3b771e8985e15c\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b3d73607d96030893210d8ac7d317700\transformed\lifecycle-viewmodel-2.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\b3d73607d96030893210d8ac7d317700\transformed\lifecycle-viewmodel-2.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\fd2525d8e729e998fcd94c2fe920a70e\transformed\lifecycle-runtime-2.6.1\AndroidManifest.xml:5:5-44
@@ -370,10 +396,10 @@ MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\HP 840 G3\.gradle\caches\t
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\0713eab75ca7cd45ddd76803b44b278c\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-components:17.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\06d336d442de1337e4e779a065ff9011\transformed\jetified-firebase-components-17.1.0\AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-components:17.1.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\06d336d442de1337e4e779a065ff9011\transformed\jetified-firebase-components-17.1.0\AndroidManifest.xml:18:5-20:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635ad80c5c3146b24e3162c16562e75f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635ad80c5c3146b24e3162c16562e75f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\ae43efc68bc8e0674a9ac80cc9a0aeab\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\ae43efc68bc8e0674a9ac80cc9a0aeab\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635ad80c5c3146b24e3162c16562e75f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\635ad80c5c3146b24e3162c16562e75f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\412ea1747794f8ba402872c982c507b3\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\412ea1747794f8ba402872c982c507b3\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\6f3d55ddef78723554205d602231003a\transformed\jetified-transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
@@ -634,6 +660,26 @@ action#com.htc.intent.action.QUICKBOOT_POWERON
 ADDED from [:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-82
 	android:name
 		ADDED from [:flutter_local_notifications] E:\Odoo\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:25-79
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher_android] E:\Odoo\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
+	android:exported
+		ADDED from [:url_launcher_android] E:\Odoo\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [:url_launcher_android] E:\Odoo\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
+	android:name
+		ADDED from [:url_launcher_android] E:\Odoo\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
+provider#com.crazecoder.openfile.FileProvider
+ADDED from [:open_file] E:\Odoo\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-20:20
+	android:grantUriPermissions
+		ADDED from [:open_file] E:\Odoo\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-47
+	android:authorities
+		ADDED from [:open_file] E:\Odoo\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-88
+	android:exported
+		ADDED from [:open_file] E:\Odoo\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-37
+	tools:replace
+		ADDED from [:open_file] E:\Odoo\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-48
+	android:name
+		ADDED from [:open_file] E:\Odoo\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-64
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
 ADDED from [com.google.android.gms:play-services-auth:20.5.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2059921191d4acbb9f1b9ad3b6710ac6\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:23:9-27:75
 	android:excludeFromRecents
@@ -776,6 +822,28 @@ ADDED from [com.google.android.gms:play-services-basement:18.2.0] C:\Users\HP 84
 		ADDED from [com.google.android.gms:play-services-basement:18.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2c79f1bef2248086e00abbcc39fc0574\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:23:13-66
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:18.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\2c79f1bef2248086e00abbcc39fc0574\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:22:13-58
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\da24b2c9b78ceeb51433bb8918b899ac\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\3cb66db2df9df1b175ea812e7cb5772a\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\3cb66db2df9df1b175ea812e7cb5772a\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\408fee4ac8da76fdf24102328ceae444\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\408fee4ac8da76fdf24102328ceae444\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\da24b2c9b78ceeb51433bb8918b899ac\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\da24b2c9b78ceeb51433bb8918b899ac\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\da24b2c9b78ceeb51433bb8918b899ac\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\da24b2c9b78ceeb51433bb8918b899ac\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\da24b2c9b78ceeb51433bb8918b899ac\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\da24b2c9b78ceeb51433bb8918b899ac\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\da24b2c9b78ceeb51433bb8918b899ac\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\HP 840 G3\.gradle\caches\transforms-3\003a22a5515e1f77f89701a46efbc2ec\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
 	android:required
@@ -808,6 +876,12 @@ uses-permission#com.example.odoo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5d74e95fb0075f60337058ab4b4b1813\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.9.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\5d74e95fb0075f60337058ab4b4b1813\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\3cb66db2df9df1b175ea812e7cb5772a\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\3cb66db2df9df1b175ea812e7cb5772a\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\3cb66db2df9df1b175ea812e7cb5772a\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
 service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
 ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\caef097eb0c2cd1082e8114d49c41ec0\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\d97736817588d35e875979bb74338a17\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:36:9-38:40
@@ -836,18 +910,6 @@ ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\H
 		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\d97736817588d35e875979bb74338a17\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
 	android:name
 		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HP 840 G3\.gradle\caches\transforms-3\d97736817588d35e875979bb74338a17\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
-provider#androidx.startup.InitializationProvider
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\408fee4ac8da76fdf24102328ceae444\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP 840 G3\.gradle\caches\transforms-3\408fee4ac8da76fdf24102328ceae444\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-	tools:node
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:28:13-31
-	android:authorities
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:26:13-68
-	android:exported
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:27:13-37
-	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:25:13-67
 meta-data#androidx.profileinstaller.ProfileInstallerInitializer
 ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP 840 G3\.gradle\caches\transforms-3\daa6fd84a99b300a5ffb02c37f933674\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
 	android:value

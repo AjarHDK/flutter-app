@@ -2,7 +2,6 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
-
 import 'auth.dart';
 
 class NotificationHelper {
@@ -39,6 +38,9 @@ class NotificationHelper {
             'qty_on_hand',
             'product_min_qty',
             'product_id',
+            'location_id',
+            'qty_on_hand',
+            'qty_to_order',
           ],
         },
       });
@@ -53,15 +55,18 @@ class NotificationHelper {
               double.parse(orderPoint['product_min_qty'].toString());
           String productName = orderPoint['product_id'][1].toString();
 
+          String emplacement = orderPoint['location_id'][1].toString();
+
           int qtyOnHand = qtyOnHandDouble.toInt();
           int productMinQty = productMinQtyDouble.toInt();
           String title;
           String body;
 
           if (qtyOnHand < productMinQty) {
-            title = 'Low Product Quantity of $productName';
+            title = 'Rupture de stock -  $productName';
             body =
-                'The quantity on hand of $productName is less than the minimum quantity.';
+                'une rupture de stock a été identifiée pour $productName dans votre inventaire au niveau de l\'emplacement $emplacement';
+
             NotificationModel notification = NotificationModel(
               title: title,
               body: body,
@@ -138,7 +143,7 @@ class NotificationHelper {
     Map<String, dynamic> map = {
       'title': notification.title,
       'body': notification.body,
-      'timestamp': notification.timestamp.millisecondsSinceEpoch,
+      'time': notification.timestamp.millisecondsSinceEpoch,
     };
     return jsonEncode(map);
   }
@@ -147,7 +152,7 @@ class NotificationHelper {
     Map<String, dynamic> map = jsonDecode(encodedNotification);
     String title = map['title'];
     String body = map['body'];
-    int timestampInMillis = map['timestamp'];
+    int timestampInMillis = map['time'];
     DateTime timestamp = DateTime.fromMillisecondsSinceEpoch(timestampInMillis);
     return NotificationModel(title: title, body: body, timestamp: timestamp);
   }

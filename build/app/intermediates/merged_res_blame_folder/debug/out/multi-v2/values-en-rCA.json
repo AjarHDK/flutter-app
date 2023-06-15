@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.odoo.app-mergeDebugResources-37:/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "com.example.odoo.app-mergeDebugResources-41:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HP 840 G3\\.gradle\\caches\\transforms-3\\bcb71054ade2de7f4dfaf698597f55fe\\transformed\\appcompat-1.2.0\\res\\values-en-rCA\\values-en-rCA.xml",
+                    "source": "C:\\Users\\HP 840 G3\\.gradle\\caches\\transforms-3\\5f0ad372327de02c707f7430e51961d6\\transformed\\appcompat-1.6.1\\res\\values-en-rCA\\values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

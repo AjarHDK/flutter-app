@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.odoo.app-mergeDebugResources-37:/values-w820dp-v13/values-w820dp-v13.xml",
+            "outputFile": "com.example.odoo.app-mergeDebugResources-41:/values-w820dp-v13/values-w820dp-v13.xml",
             "map": [
                 {
                     "source": "E:\\Odoo\\build\\flutter_barcode_scanner\\intermediates\\packaged_res\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",

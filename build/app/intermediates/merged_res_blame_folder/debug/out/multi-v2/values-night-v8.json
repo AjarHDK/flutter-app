@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.odoo.app-mergeDebugResources-37:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.odoo.app-mergeDebugResources-41:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "C:\\Users\\HP 840 G3\\.gradle\\caches\\transforms-3\\6a31700874d8768c1a72a6f7d5d446cb\\transformed\\material-1.3.0\\res\\values-night-v8\\values-night-v8.xml",
@@ -21,23 +21,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\HP 840 G3\\.gradle\\caches\\transforms-3\\bcb71054ade2de7f4dfaf698597f55fe\\transformed\\appcompat-1.2.0\\res\\values-night-v8\\values-night-v8.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,125,209,293,389,491,593,687",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "120,204,288,384,486,588,682,771"
-                    },
-                    "to": {
-                        "startLines": "9,10,11,12,13,14,15,32",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "405,475,559,643,739,841,943,2899",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "470,554,638,734,836,938,1032,2983"
-                    }
-                },
-                {
                     "source": "E:\\Odoo\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
@@ -54,6 +37,23 @@
                         "endLines": "5,8",
                         "endColumns": "12,12",
                         "endOffsets": "231,400"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HP 840 G3\\.gradle\\caches\\transforms-3\\5f0ad372327de02c707f7430e51961d6\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13,14,15,32",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "405,475,559,643,739,841,943,2899",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "470,554,638,734,836,938,1032,2983"
                     }
                 }
             ]

@@ -1,27 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.odoo.app-mergeDebugResources-37:/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "com.example.odoo.app-mergeDebugResources-41:/values-watch-v20/values-watch-v20.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\HP 840 G3\\.gradle\\caches\\transforms-3\\bcb71054ade2de7f4dfaf698597f55fe\\transformed\\appcompat-1.2.0\\res\\values-watch-v20\\values-watch-v20.xml",
-                    "from": {
-                        "startLines": "2,5,8",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,214,385",
-                        "endLines": "4,7,10",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "209,380,553"
-                    },
-                    "to": {
-                        "startLines": "10,13,16",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "715,874,1045",
-                        "endLines": "12,15,18",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "869,1040,1213"
-                    }
-                },
                 {
                     "source": "C:\\Users\\HP 840 G3\\.gradle\\caches\\transforms-3\\2059921191d4acbb9f1b9ad3b6710ac6\\transformed\\jetified-play-services-auth-20.5.0\\res\\values-watch-v20\\values.xml",
                     "from": {
@@ -37,6 +18,25 @@
                         "startOffsets": "55,134,214,293,372,463,544,635",
                         "endColumns": "78,79,78,78,90,80,90,79",
                         "endOffsets": "129,209,288,367,458,539,630,710"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HP 840 G3\\.gradle\\caches\\transforms-3\\5f0ad372327de02c707f7430e51961d6\\transformed\\appcompat-1.6.1\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    },
+                    "to": {
+                        "startLines": "10,13,16",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "715,874,1045",
+                        "endLines": "12,15,18",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "869,1040,1213"
                     }
                 }
             ]

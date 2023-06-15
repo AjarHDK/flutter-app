@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.odoo.app-mergeDebugResources-37:/values-v16/values-v16.xml",
+            "outputFile": "com.example.odoo.app-mergeDebugResources-41:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HP 840 G3\\.gradle\\caches\\transforms-3\\5d74e95fb0075f60337058ab4b4b1813\\transformed\\core-1.9.0\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\HP 840 G3\\.gradle\\caches\\transforms-3\\bcb71054ade2de7f4dfaf698597f55fe\\transformed\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\HP 840 G3\\.gradle\\caches\\transforms-3\\5f0ad372327de02c707f7430e51961d6\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HP 840 G3\\.gradle\\caches\\transforms-3\\5d74e95fb0075f60337058ab4b4b1813\\transformed\\core-1.9.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

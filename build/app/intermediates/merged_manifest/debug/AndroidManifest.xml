@@ -160,6 +160,21 @@
         </receiver>
 
         <activity
+            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <provider
+            android:name="com.crazecoder.openfile.FileProvider"
+            android:authorities="com.example.odoo.fileProvider.com.crazecoder.openfile"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"
             android:exported="false"
@@ -227,6 +242,21 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.example.odoo.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
         <uses-library
             android:name="androidx.window.extensions"
             android:required="false" />
@@ -250,16 +280,6 @@
         <receiver
             android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
             android:exported="false" />
-
-        <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.example.odoo.androidx-startup"
-            android:exported="false" >
-            <meta-data
-                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-                android:value="androidx.startup" />
-        </provider>
-
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"
             android:directBootAware="false"
