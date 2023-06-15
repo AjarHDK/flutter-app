@@ -57,7 +57,6 @@ class UserPage extends StatefulWidget {
   }
 
   static Future<void> sendEmailToUser(String email) async {
-    final orpc = Auth.orpc;
     final username = 'consulaltantstockodoo@gmail.com'; // Your email address
     final password = 'jkaddhfivholdniv'; // Your email password or app password
 
@@ -82,56 +81,6 @@ class UserPage extends StatefulWidget {
       int productMinQty = productMinQtyDouble.toInt();
 
       if (qtyOnHand < productMinQty) {
-        int product_id = orderPoint['product_id'][0];
-        final product_name = await orpc?.callKw({
-          'model': 'product.product',
-          'method': 'search_read',
-          'args': [
-            [
-              ['id', '=', product_id],
-            ],
-          ],
-          'kwargs': {
-            'fields': ['name'],
-          },
-        });
-        String productName = product_name[0]['name'];
-
-        final supplier_records = await orpc?.callKw({
-          'model': 'product.supplierinfo',
-          'method': 'search_read',
-          'args': [
-            [
-              ['product_tmpl_id', '=', product_id]
-            ],
-          ],
-          'kwargs': {
-            'fields': ['partner_id', 'price', 'delay'],
-          },
-        });
-
-        for (var supplier in supplier_records) {
-          final partner_name = await orpc?.callKw({
-            'model': 'res.partner',
-            'method': 'search_read',
-            'args': [
-              [
-                [
-                  ['id', '=', supplier['partner_id'][0]]
-                ]
-              ],
-            ],
-            'kwargs': {
-              'fields': ['name'],
-            },
-          });
-
-          print('Product Name: $productName');
-          print('Supplier Name: ${partner_name[0]['name']}');
-          print('Price: ${supplier['price']}');
-          print('Delay: ${supplier['delay']}');
-        }
-
         pdf.addPage(
           pw.Page(
             build: (pw.Context context) {
