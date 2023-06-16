@@ -114,7 +114,7 @@ class NavBar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.description),
-            title: Text('Rapport'),
+            title: Text('Bon de Mouvement'),
             onTap: () {
               Navigator.push(
                 context,

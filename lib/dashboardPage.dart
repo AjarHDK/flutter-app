@@ -13,6 +13,7 @@ class _DashboardPageState extends State<DashboardPage> {
   List<dynamic> pendingReceptions = [];
   List<dynamic> pendingDeliveries = [];
   List<dynamic> pendingTransfers = [];
+  List<dynamic> additionalData = [];
 
   @override
   void initState() {
@@ -38,8 +39,27 @@ class _DashboardPageState extends State<DashboardPage> {
             'partner_id',
             'scheduled_date',
             'picking_type_id',
+            'picking_type_code',
             'state',
           ],
+        },
+      });
+      final additionalResponse = await orpc?.callKw({
+        'model':
+            'stock.move', // Replace 'other.model' with the actual model name
+        'method': 'search_read',
+        'args': [],
+        'kwargs': {
+          'fields': [
+            'id',
+            'reference',
+            'picking_id',
+            'state',
+            'location_id',
+            'product_uom_qty',
+            'quantity_done',
+            'location_dest_id',
+          ], // Replace with the desired fields
         },
       });
 
@@ -59,6 +79,7 @@ class _DashboardPageState extends State<DashboardPage> {
             'partner_id',
             'scheduled_date',
             'picking_type_id',
+            'picking_type_code',
             'state',
           ],
         },
@@ -75,6 +96,7 @@ class _DashboardPageState extends State<DashboardPage> {
         'kwargs': {
           'fields': [
             'id',
+            'picking_type_code',
             'product_id',
             'name',
             'partner_id',
@@ -86,6 +108,7 @@ class _DashboardPageState extends State<DashboardPage> {
       });
 
       setState(() {
+        additionalData = additionalResponse;
         pendingReceptions = receptionResponse
             .where((reception) => reception['state'] != 'done')
             .toList();
@@ -158,8 +181,8 @@ class _DashboardPageState extends State<DashboardPage> {
                 // Filter reception items based on the picking_type_id
                 List<dynamic> receptionItems = pendingReceptions
                     .where((reception) =>
-                        reception['picking_type_id'][0] ==
-                        1) // Compare with an integer value (1) instead of a string ('incoming')
+                        reception['picking_type_code'] ==
+                        'incoming') // Compare with an integer value (1) instead of a string ('incoming')
                     .toList();
 
                 navigateToItemsPage(receptionItems);
@@ -174,8 +197,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 // Filter delivery items based on the picking_type_id
                 List<dynamic> deliveryItems = pendingDeliveries
                     .where((delivery) =>
-                        delivery['picking_type_id'][0] ==
-                        2) // Compare with an integer value (2) instead of a string ('outgoing')
+                        delivery['picking_type_code'] == 'outgoing')
                     .toList();
 
                 navigateToItemsPage(deliveryItems);
@@ -190,8 +212,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 // Filter internal transfer items based on the picking_type_id
                 List<dynamic> transferItems = pendingTransfers
                     .where((transfer) =>
-                        transfer['picking_type_id'][0] ==
-                        3) // Compare with an integer value (3) instead of a string ('internal')
+                        transfer['picking_type_code'] == 'internal')
                     .toList();
 
                 navigateToItemsPage(transferItems);
@@ -263,8 +284,7 @@ class ItemsPage extends StatelessWidget {
           final item = items[index];
           return ListTile(
             title: Text(item['name']), // Use the 'name' field from the item
-            subtitle: Text(item['product_id'][1] ??
-                ''), // Use the 'product_id'[1] field from the item
+            // Use the 'product_id'[1] field from the item
             onTap: () {
               // Handle item tap
             },

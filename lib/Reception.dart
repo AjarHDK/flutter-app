@@ -53,8 +53,10 @@ class _ReceptionPageState extends State<ReceptionPage> {
             'reference',
             'picking_id',
             'state',
+            'location_id',
             'product_uom_qty',
             'quantity_done',
+            'location_dest_id',
           ], // Replace with the desired fields
         },
       });
@@ -131,10 +133,16 @@ Widget buildProductItem(
         Text('type operation: ${reception['picking_type_id'][1]}'),
         Text(
             'product: ${reception['product_id'] is bool ? 'none' : reception['product_id'][1].toString()}'),
-        Text('id: ${reception['id'].toString()}'),
         if (additionalItem != null) ...[
           Text('quantity demandée: ${additionalItem['product_uom_qty']}'),
           Text('quantity done : ${additionalItem['quantity_done']}'),
+          Row(
+            children: [
+              Text('De: ${additionalItem['location_id'][1]}'),
+              Spacer(),
+              Text('Vers: ${additionalItem['location_dest_id'][1]}'),
+            ],
+          )
         ],
       ],
     ),
