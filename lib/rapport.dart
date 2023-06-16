@@ -439,6 +439,16 @@ class DetailsPage extends StatelessWidget {
         ),
       ),
     );
+    content.add(
+      pw.Container(
+        alignment: pw.Alignment.center,
+        child: pw.Image(
+          pw.MemoryImage(File('images/LOGO.jpeg').readAsBytesSync()),
+          width: 200,
+          height: 200,
+        ),
+      ),
+    );
 
     // Create a list of data rows for the table
     List<pw.TableRow> tableRows = [];

@@ -38,6 +38,7 @@ class _ReceptionPageState extends State<ReceptionPage> {
             'scheduled_date',
             'picking_type_id',
             'state',
+            'create_date',
           ],
         },
       });

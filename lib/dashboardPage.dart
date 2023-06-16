@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:odoo/updateTransfert.dart';
 import 'auth.dart';
 import 'notification_helper.dart';
 import 'package:intl/intl.dart';
@@ -144,7 +145,7 @@ class _DashboardPageState extends State<DashboardPage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => ItemsPage(items),
+        builder: (context) => ItemsPage(items, additionalData),
       ),
     );
   }
@@ -269,8 +270,9 @@ class _DashboardPageState extends State<DashboardPage> {
 
 class ItemsPage extends StatelessWidget {
   final List<dynamic> items;
+  final List<dynamic> additionalData;
 
-  ItemsPage(this.items);
+  ItemsPage(this.items, this.additionalData);
 
   @override
   Widget build(BuildContext context) {
@@ -281,18 +283,62 @@ class ItemsPage extends StatelessWidget {
       body: ListView.builder(
         itemCount: items.length,
         itemBuilder: (context, index) {
-          final item = items[index];
-          return ListTile(
-            title: Text(item['name']), // Use the 'name' field from the item
-            // Use the 'product_id'[1] field from the item
-            onTap: () {
-              // Handle item tap
-            },
-          );
+          final reception = items[index];
+          return buildProductItem(reception, additionalData,
+              context); // Pass additionalData as a parameter
         },
       ),
     );
   }
+}
+
+Widget buildProductItem(
+    dynamic reception, List<dynamic> additionalData, BuildContext context) {
+  // Add additionalData parameter
+  final additionalItem = additionalData.firstWhere(
+    (item) => item['reference'] == reception['name'],
+    orElse: () => null,
+  );
+
+  return ListTile(
+    title: Text(reception['name'] ?? ''),
+    // subtitle: Text(reception['partner_id'][1].toString()),
+    subtitle: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('date: ${reception['scheduled_date'] ?? ''}'),
+        Text('Status: ${reception['state']}'),
+        Text('type operation: ${reception['picking_type_id'][1]}'),
+        Text(
+            'product: ${reception['product_id'] is bool ? 'none' : reception['product_id'][1].toString()}'),
+        if (additionalItem != null) ...[
+          Text('quantity demandée: ${additionalItem['product_uom_qty']}'),
+          Text('quantity done : ${additionalItem['quantity_done']}'),
+          Row(
+            children: [
+              Text('De: ${additionalItem['location_id'][1]}'),
+              Spacer(),
+              Text('Vers: ${additionalItem['location_dest_id'][1]}'),
+            ],
+          )
+        ],
+      ],
+    ),
+    onTap: () {
+      if (reception['state'] != 'done') {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => UpdateTransfertPage(
+              reception: reception,
+              additionalItem:
+                  additionalItem, // Pass additionalItem as a parameter
+            ),
+          ),
+        );
+      }
+    },
+  );
 }
 
 class NotificationPage extends StatelessWidget {
