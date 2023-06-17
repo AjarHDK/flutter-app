@@ -138,14 +138,15 @@ class _UpdateTransfertPageState extends State<UpdateTransfertPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Product: ${widget.reception['product_id']?[1] ?? 'None'}',
-            ),
+                'Product: ${widget.reception != null && widget.reception.containsKey('product_id') && widget.reception['product_id'] != null ? widget.reception['product_id'][1] ?? 'None' : 'None'}'),
             SizedBox(height: 16),
             Text('Reference: ${widget.additionalItem['reference']}'),
             SizedBox(height: 16),
-            Text('De: ${widget.additionalItem['location_id'][1]}'),
+            Text(
+                'De: ${widget.additionalItem != null ? (widget.additionalItem['location_id'] != null ? widget.additionalItem['location_id'][1] : 'N/A') : 'N/A'}'),
             SizedBox(height: 16),
-            Text('Vers: ${widget.additionalItem['location_dest_id'][1]}'),
+            Text(
+                'De: ${widget.additionalItem != null ? (widget.additionalItem['location_dest_id'] != null ? widget.additionalItem['location_dest_id'][1] : 'N/A') : 'N/A'}'),
             SizedBox(height: 16),
             Text('Date: ${widget.reception['scheduled_date']}'),
             SizedBox(height: 16),

@@ -4,6 +4,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:open_file/open_file.dart';
 import 'dart:io';
+import 'commande.dart';
 
 class RapportPage extends StatefulWidget {
   @override
@@ -23,7 +24,7 @@ class _RapportPageState extends State<RapportPage>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 4, vsync: this);
     fetchValidatedDeliveries();
     fetchValidatedReceptions();
     fetchValidatedInternals();
@@ -238,7 +239,7 @@ class _RapportPageState extends State<RapportPage>
             child: ListTile(
               title: Text('Reception'),
               subtitle: Text(productName),
-              leading: Icon(Icons.local_shipping),
+              leading: Icon(Icons.check_box),
             ),
           ),
         );
@@ -269,7 +270,7 @@ class _RapportPageState extends State<RapportPage>
             child: ListTile(
               title: Text('Internal'),
               subtitle: Text(productName),
-              leading: Icon(Icons.local_shipping),
+              leading: Icon(Icons.swap_horiz),
             ),
           ),
         );
@@ -285,9 +286,34 @@ class _RapportPageState extends State<RapportPage>
         bottom: TabBar(
           controller: _tabController,
           tabs: [
-            Tab(text: 'Deliveries'),
-            Tab(text: 'Receptions'),
-            Tab(text: 'Internals'),
+            Tab(
+              child: Text(
+                'Deliveries',
+                style: TextStyle(
+                    fontSize: 11), // Adjust the fontSize value as needed
+              ),
+            ),
+            Tab(
+              child: Text(
+                'Receptions',
+                style: TextStyle(
+                    fontSize: 11), // Adjust the fontSize value as needed
+              ),
+            ),
+            Tab(
+              child: Text(
+                'Internals',
+                style: TextStyle(
+                    fontSize: 11), // Adjust the fontSize value as needed
+              ),
+            ),
+            Tab(
+              child: Text(
+                'Commande',
+                style: TextStyle(
+                    fontSize: 11), // Adjust the fontSize value as needed
+              ),
+            ),
           ],
         ),
       ),
@@ -299,6 +325,7 @@ class _RapportPageState extends State<RapportPage>
                 _buildDeliveryList(),
                 _buildReceptionList(),
                 _buildInternalList(),
+                FournisseursPrPage(),
               ],
             ),
     );
@@ -436,16 +463,6 @@ class DetailsPage extends StatelessWidget {
         style: pw.TextStyle(
           fontSize: 20,
           fontWeight: pw.FontWeight.bold,
-        ),
-      ),
-    );
-    content.add(
-      pw.Container(
-        alignment: pw.Alignment.center,
-        child: pw.Image(
-          pw.MemoryImage(File('images/LOGO.jpeg').readAsBytesSync()),
-          width: 200,
-          height: 200,
         ),
       ),
     );

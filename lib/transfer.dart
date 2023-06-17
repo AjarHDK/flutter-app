@@ -135,15 +135,18 @@ Widget buildProductItem(
       ],
     ),
     onTap: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => UpdateTransfertPage(
-            reception: reception,
-            additionalItem: additionalItem,
+      if (reception['state'] != 'done') {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => UpdateTransfertPage(
+              reception: reception,
+              additionalItem:
+                  additionalItem, // Pass additionalItem as a parameter
+            ),
           ),
-        ),
-      );
+        );
+      }
     },
   );
 }

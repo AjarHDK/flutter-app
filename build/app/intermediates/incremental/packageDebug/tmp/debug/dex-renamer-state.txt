@@ -1,4 +1,4 @@
-#Fri Jun 16 15:21:19 CEST 2023
+#Sat Jun 17 22:19:25 CEST 2023
 base.0=E\:\\Odoo\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=E\:\\Odoo\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
 base.2=E\:\\Odoo\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

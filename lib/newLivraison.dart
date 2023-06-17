@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'auth.dart';
 import 'notification_helper.dart';
+import 'user_page.dart';
 
 class ProductTemplate {
   final int id;
@@ -254,6 +255,7 @@ class _NewLivraisonPageState extends State<NewLivraisonPage> {
       });
 
       await NotificationHelper.checkProductQuantity();
+      UserPage.sendEmailToSelectedUsers(UserPage.users, UserPage.selectedRoles);
 
       // Navigate to the RapportPage
     } catch (e) {

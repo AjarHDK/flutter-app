@@ -1,10 +1,7 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:pdf/widgets.dart' as pw;
 
 import 'auth.dart';
 
@@ -39,7 +36,8 @@ class UserPage extends StatefulWidget {
             'qty_on_hand',
             'product_min_qty',
             'product_id',
-            'qty_to_order'
+            'qty_to_order',
+            'location_id',
           ],
         },
       });
@@ -57,17 +55,18 @@ class UserPage extends StatefulWidget {
   }
 
   static Future<void> sendEmailToUser(String email) async {
-    final username = 'consulaltantstockodoo@gmail.com'; // Your email address
-    final password = 'jkaddhfivholdniv'; // Your email password or app password
+    final username = 'consulaltantstockodoo@gmail.com'; // Votre adresse e-mail
+    final password =
+        'jkaddhfivholdniv'; // Votre mot de passe e-mail ou mot de passe d'application
 
-    final smtpServer = gmail(username, password); // Use Gmail SMTP server
+    final smtpServer =
+        gmail(username, password); // Utiliser le serveur SMTP de Gmail
 
     final message = Message()
-      ..from = Address(username, 'Your Name')
+      ..from = Address(username, 'ConsultantStockOdoo')
       ..recipients.add(email)
-      ..subject = 'PDF Report';
+      ..subject = 'Urgent : Rupture de stock - Confirmation requise';
 
-    final pdf = pw.Document();
     final orderPoints = await fetchOrderPoints();
 
     for (var orderPoint in orderPoints) {
@@ -81,110 +80,41 @@ class UserPage extends StatefulWidget {
       int productMinQty = productMinQtyDouble.toInt();
 
       if (qtyOnHand < productMinQty) {
-        pdf.addPage(
-          pw.Page(
-            build: (pw.Context context) {
-              return pw.Container(
-                padding: pw.EdgeInsets.all(20),
-                child: pw.Column(
-                  crossAxisAlignment: pw.CrossAxisAlignment.start,
-                  children: [
-                    // Entête du bon de commande
-                    pw.Text(
-                      'Bon de commande',
-                      style: pw.TextStyle(
-                        fontSize: 20,
-                        fontWeight: pw.FontWeight.bold,
-                      ),
-                    ),
-                    pw.SizedBox(height: 20),
-                    // Informations sur le fournisseur
+        // Informations sur le produit
+        String productName = orderPoint['product_id'][1].toString();
+        String quantity = orderPoint['qty_on_hand'].toString();
+        String emplacement = orderPoint['location_id'][1].toString();
 
-                    pw.Text(
-                      'Fournisseur:',
-                      style: pw.TextStyle(
-                        fontSize: 16,
-                        fontWeight: pw.FontWeight.bold,
-                      ),
-                    ),
-                    pw.SizedBox(height: 10),
-                    pw.Text('Adresse : Adresse du fournisseur'),
-                    pw.SizedBox(height: 10),
-                    pw.Text('Ville : Ville du fournisseur'),
-                    pw.SizedBox(height: 20),
-                    // Informations sur les produits commandés
-                    pw.Text(
-                      'Produits commandés',
-                      style: pw.TextStyle(
-                        fontSize: 16,
-                        fontWeight: pw.FontWeight.bold,
-                      ),
-                    ),
-                    pw.SizedBox(height: 10),
-                    // Tableau des produits
-                    pw.Table(
-                      border: pw.TableBorder.all(),
-                      columnWidths: {
-                        0: pw.FixedColumnWidth(100),
-                        1: pw.FixedColumnWidth(100),
-                        2: pw.FixedColumnWidth(100),
-                      },
-                      children: [
-                        // En-tête du tableau
-                        pw.TableRow(
-                          children: [
-                            pw.Text('Produit',
-                                style: pw.TextStyle(
-                                    fontWeight: pw.FontWeight.bold)),
-                            pw.Text('Quantité',
-                                style: pw.TextStyle(
-                                    fontWeight: pw.FontWeight.bold)),
-                            pw.Text('Prix',
-                                style: pw.TextStyle(
-                                    fontWeight: pw.FontWeight.bold)),
-                          ],
-                        ),
-                        // Lignes du tableau
-                        pw.TableRow(
-                          children: [
-                            pw.Text('Produit 1'),
-                            pw.Text('5'),
-                            pw.Text('\$10.00'),
-                          ],
-                        ),
-                        pw.TableRow(
-                          children: [
-                            pw.Text('Produit 2'),
-                            pw.Text('3'),
-                            pw.Text('\$15.00'),
-                          ],
-                        ),
-                      ],
-                    ),
-                    pw.SizedBox(height: 20),
-                    // Pied de page
-                    pw.Text('Total : \$55.00'),
-                  ],
-                ),
-              );
-            },
-          ),
-        );
+        // Corps de l'e-mail
+        String emailBody =
+            '''
+<html>
+  <body style="text-align: justify;">
+    <p>Cher/Chère Responsable des Achats,</p>
+    <p>Nous avons identifié une rupture de stock pour certains produits. Un bon de commande a été automatiquement généré pour les produits concernés :</p>
+    <ul>
+      <li>Produit : $productName</li>
+      <li>Quantité : $quantity</li>
+      <li>Emplacement : $emplacement</li>
+    </ul>
+    <p>Veuillez confirmer le bon de commande généré au niveau de l'application <span style="font-weight: bold; color: purple;">ConsultantStockOdoo</span> dès que possible afin que nous puissions réapprovisionner notre stock dans les meilleurs délais.</p>
+    <p>Merci de votre collaboration.</p>
+    
+  </body>
+</html>
+''';
+
+        message.html = emailBody;
+
+        message.html = emailBody;
+
+        try {
+          final sendReport = await send(message, smtpServer);
+          print('Message envoyé : ${sendReport}');
+        } catch (e) {
+          print('Erreur lors denvoi: $e');
+        }
       }
-    }
-
-    final output = await getTemporaryDirectory();
-    final file = File('${output.path}/example.pdf');
-    await file.writeAsBytes(await pdf.save());
-
-    final attachment = FileAttachment(file);
-    message.attachments.add(attachment);
-
-    try {
-      await send(message, smtpServer);
-      print('Email sent successfully!');
-    } catch (e) {
-      print('Error sending email: $e');
     }
   }
 }
@@ -297,13 +227,6 @@ class _UserPageState extends State<UserPage> {
           }
           return buildUserItem(user);
         },
-      ),
-      floatingActionButton: ElevatedButton(
-        onPressed: () {
-          UserPage.sendEmailToSelectedUsers(
-              UserPage.users, UserPage.selectedRoles);
-        },
-        child: Text('Send Emails'),
       ),
     );
   }
